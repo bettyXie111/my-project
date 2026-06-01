@@ -1,0 +1,2108 @@
+{
+  "meta": {
+    "softwareName": "隧道围岩变形预测与支护设计辅助软件",
+    "version": "V1.0",
+    "generatedAt": "2026-05-15T10:00:00",
+    "siteName": "青云岭隧道右洞进口工区",
+    "ownerUnit": "西南山岭交通建设项目部"
+  },
+  "users": [
+    {
+      "username": "admin",
+      "password": "admin123",
+      "name": "总控台管理员",
+      "role": "admin",
+      "title": "项目数字化负责人",
+      "permissions": [
+        "dashboard",
+        "analysis",
+        "design",
+        "alerts",
+        "reports"
+      ]
+    },
+    {
+      "username": "monitor",
+      "password": "admin123",
+      "name": "监测工程师",
+      "role": "monitor",
+      "title": "现场监测组",
+      "permissions": [
+        "dashboard",
+        "analysis",
+        "alerts"
+      ]
+    },
+    {
+      "username": "support",
+      "password": "admin123",
+      "name": "支护设计师",
+      "role": "designer",
+      "title": "设计复核组",
+      "permissions": [
+        "dashboard",
+        "design",
+        "reports"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "id": "PJ-TUNNEL-001",
+      "name": "青云岭双线隧道围岩智能管控工程",
+      "lineLength": 3840,
+      "segmentCount": 12,
+      "status": "construction",
+      "designInstitute": "山地地下工程设计院",
+      "monitoringVendor": "岩土监测中心"
+    }
+  ],
+  "supportTemplates": [
+    {
+      "level": "A",
+      "label": "稳定区",
+      "scoreRange": [
+        0,
+        34
+      ],
+      "shotcreteThickness": 18,
+      "boltLength": 3.0,
+      "boltSpacing": "1.2m x 1.2m",
+      "steelArchSpacing": "1.0m",
+      "advanceSupport": "常规超前小导管",
+      "closureHours": 24,
+      "monitoringCycle": "每日 1 次"
+    },
+    {
+      "level": "B",
+      "label": "敏感区",
+      "scoreRange": [
+        35,
+        49
+      ],
+      "shotcreteThickness": 22,
+      "boltLength": 3.5,
+      "boltSpacing": "1.0m x 1.0m",
+      "steelArchSpacing": "0.8m",
+      "advanceSupport": "超前小导管 + 锚索局部加密",
+      "closureHours": 18,
+      "monitoringCycle": "12 小时 1 次"
+    },
+    {
+      "level": "C",
+      "label": "预警区",
+      "scoreRange": [
+        50,
+        64
+      ],
+      "shotcreteThickness": 26,
+      "boltLength": 4.0,
+      "boltSpacing": "0.9m x 0.9m",
+      "steelArchSpacing": "0.6m",
+      "advanceSupport": "超前管棚 + 系统锚杆",
+      "closureHours": 14,
+      "monitoringCycle": "8 小时 1 次"
+    },
+    {
+      "level": "D",
+      "label": "高风险区",
+      "scoreRange": [
+        65,
+        79
+      ],
+      "shotcreteThickness": 30,
+      "boltLength": 4.5,
+      "boltSpacing": "0.8m x 0.8m",
+      "steelArchSpacing": "0.5m",
+      "advanceSupport": "长管棚 + 锚索 + 临时仰拱",
+      "closureHours": 10,
+      "monitoringCycle": "4 小时 1 次"
+    },
+    {
+      "level": "E",
+      "label": "应急区",
+      "scoreRange": [
+        80,
+        100
+      ],
+      "shotcreteThickness": 34,
+      "boltLength": 5.0,
+      "boltSpacing": "0.7m x 0.7m",
+      "steelArchSpacing": "0.4m",
+      "advanceSupport": "全断面预加固 + 双层钢拱架",
+      "closureHours": 8,
+      "monitoringCycle": "2 小时 1 次"
+    }
+  ],
+  "reportTemplates": [
+    {
+      "id": "RPT-WEEKLY",
+      "name": "周围岩变形巡检简报",
+      "sections": [
+        "概览",
+        "风险段落",
+        "预测趋势",
+        "支护偏差",
+        "监测计划"
+      ]
+    },
+    {
+      "id": "RPT-ALERT",
+      "name": "预警段应急处置清单",
+      "sections": [
+        "触发条件",
+        "现场措施",
+        "复测安排",
+        "复核责任人"
+      ]
+    }
+  ],
+  "sections": [
+    {
+      "id": "SEC-001",
+      "name": "ZK1 掌子面",
+      "zone": "ZK1",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "IV",
+      "burialDepth": 186,
+      "biasPressure": "左偏压",
+      "groundwaterLevel": "弱",
+      "designLevel": "A",
+      "advanceRate": 1.35,
+      "supportClosureHours": 8,
+      "reservedDeformation": 45,
+      "monitoringFrequency": "8h",
+      "currentRisk": "LOW",
+      "remarks": "中风化砂岩夹薄层泥岩，层理发育，局部掉块。",
+      "initialSupport": {
+        "shotcreteThickness": 24,
+        "boltLength": 3.8,
+        "steelArch": "I20b",
+        "reservedDeformation": 70
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 5.2,
+          "convergence": 4.4,
+          "archStress": 110.0,
+          "sideWallRate": 0.32,
+          "advanceMeters": 1.25
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 6.22,
+          "convergence": 5.01,
+          "archStress": 118.2,
+          "sideWallRate": 0.4,
+          "advanceMeters": 1.28
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 7.24,
+          "convergence": 5.62,
+          "archStress": 126.4,
+          "sideWallRate": 0.48,
+          "advanceMeters": 1.31
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 8.26,
+          "convergence": 6.23,
+          "archStress": 134.6,
+          "sideWallRate": 0.56,
+          "advanceMeters": 1.34
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 6.88,
+          "convergence": 5.88,
+          "archStress": 123.6,
+          "sideWallRate": 0.5,
+          "advanceMeters": 1.37
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 7.9,
+          "convergence": 6.49,
+          "archStress": 131.8,
+          "sideWallRate": 0.58,
+          "advanceMeters": 1.4
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 8.92,
+          "convergence": 7.1,
+          "archStress": 140.0,
+          "sideWallRate": 0.66,
+          "advanceMeters": 1.43
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 9.94,
+          "convergence": 7.71,
+          "archStress": 148.2,
+          "sideWallRate": 0.74,
+          "advanceMeters": 1.46
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 8.56,
+          "convergence": 7.36,
+          "archStress": 137.2,
+          "sideWallRate": 0.68,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 9.58,
+          "convergence": 7.97,
+          "archStress": 145.4,
+          "sideWallRate": 0.76,
+          "advanceMeters": 1.52
+        }
+      ],
+      "geologyNote": "中风化砂岩夹薄层泥岩，层理发育，局部掉块。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-002",
+      "name": "ZK2 掌子面",
+      "zone": "ZK2",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "V",
+      "burialDepth": 224,
+      "biasPressure": "均压",
+      "groundwaterLevel": "中等",
+      "designLevel": "A",
+      "advanceRate": 1.44,
+      "supportClosureHours": 10,
+      "reservedDeformation": 53,
+      "monitoringFrequency": "8h",
+      "currentRisk": "LOW",
+      "remarks": "强风化板岩，富水软弱夹层明显，掌子面稳定性差。",
+      "initialSupport": {
+        "shotcreteThickness": 28,
+        "boltLength": 4.5,
+        "steelArch": "H175",
+        "reservedDeformation": 110
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 7.2,
+          "convergence": 5.74,
+          "archStress": 123.8,
+          "sideWallRate": 0.39,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 8.23,
+          "convergence": 6.36,
+          "archStress": 132.0,
+          "sideWallRate": 0.47,
+          "advanceMeters": 1.52
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 9.27,
+          "convergence": 6.99,
+          "archStress": 140.2,
+          "sideWallRate": 0.55,
+          "advanceMeters": 1.55
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 7.9,
+          "convergence": 6.65,
+          "archStress": 129.2,
+          "sideWallRate": 0.48,
+          "advanceMeters": 1.58
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 8.94,
+          "convergence": 7.27,
+          "archStress": 137.4,
+          "sideWallRate": 0.57,
+          "advanceMeters": 1.61
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 9.97,
+          "convergence": 7.89,
+          "archStress": 145.6,
+          "sideWallRate": 0.65,
+          "advanceMeters": 1.64
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 11.01,
+          "convergence": 8.52,
+          "archStress": 153.8,
+          "sideWallRate": 0.73,
+          "advanceMeters": 1.67
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 9.64,
+          "convergence": 8.18,
+          "archStress": 142.8,
+          "sideWallRate": 0.67,
+          "advanceMeters": 1.7
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 10.68,
+          "convergence": 8.8,
+          "archStress": 151.0,
+          "sideWallRate": 0.75,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 11.71,
+          "convergence": 9.43,
+          "archStress": 159.2,
+          "sideWallRate": 0.83,
+          "advanceMeters": 1.76
+        }
+      ],
+      "geologyNote": "强风化板岩，富水软弱夹层明显，掌子面稳定性差。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-003",
+      "name": "ZK3 掌子面",
+      "zone": "ZK3",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "III",
+      "burialDepth": 152,
+      "biasPressure": "右偏压",
+      "groundwaterLevel": "较强",
+      "designLevel": "A",
+      "advanceRate": 1.53,
+      "supportClosureHours": 12,
+      "reservedDeformation": 61,
+      "monitoringFrequency": "24h",
+      "currentRisk": "LOW",
+      "remarks": "完整性较好的石灰岩，节理裂隙中等发育。",
+      "initialSupport": {
+        "shotcreteThickness": 18,
+        "boltLength": 3.0,
+        "steelArch": "I18",
+        "reservedDeformation": 45
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 9.2,
+          "convergence": 7.08,
+          "archStress": 137.6,
+          "sideWallRate": 0.45,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 10.25,
+          "convergence": 7.72,
+          "archStress": 145.8,
+          "sideWallRate": 0.53,
+          "advanceMeters": 1.76
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 8.9,
+          "convergence": 7.39,
+          "archStress": 134.8,
+          "sideWallRate": 0.47,
+          "advanceMeters": 1.79
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 9.95,
+          "convergence": 8.03,
+          "archStress": 143.0,
+          "sideWallRate": 0.55,
+          "advanceMeters": 1.82
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 11.0,
+          "convergence": 8.66,
+          "archStress": 151.2,
+          "sideWallRate": 0.63,
+          "advanceMeters": 1.85
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 12.05,
+          "convergence": 9.3,
+          "archStress": 159.4,
+          "sideWallRate": 0.71,
+          "advanceMeters": 1.88
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 10.7,
+          "convergence": 8.98,
+          "archStress": 148.4,
+          "sideWallRate": 0.65,
+          "advanceMeters": 1.91
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 11.75,
+          "convergence": 9.61,
+          "archStress": 156.6,
+          "sideWallRate": 0.73,
+          "advanceMeters": 1.94
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 12.8,
+          "convergence": 10.25,
+          "archStress": 164.8,
+          "sideWallRate": 0.81,
+          "advanceMeters": 1.97
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 13.85,
+          "convergence": 10.88,
+          "archStress": 173.0,
+          "sideWallRate": 0.89,
+          "advanceMeters": 2.0
+        }
+      ],
+      "geologyNote": "完整性较好的石灰岩，节理裂隙中等发育。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-004",
+      "name": "ZK4 掌子面",
+      "zone": "ZK4",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "IV",
+      "burialDepth": 278,
+      "biasPressure": "左偏压",
+      "groundwaterLevel": "强",
+      "designLevel": "B",
+      "advanceRate": 1.62,
+      "supportClosureHours": 14,
+      "reservedDeformation": 69,
+      "monitoringFrequency": "8h",
+      "currentRisk": "MEDIUM",
+      "remarks": "千枚岩挤压破碎，围岩有明显松弛区。",
+      "initialSupport": {
+        "shotcreteThickness": 24,
+        "boltLength": 3.8,
+        "steelArch": "I20b",
+        "reservedDeformation": 70
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 11.2,
+          "convergence": 8.42,
+          "archStress": 151.4,
+          "sideWallRate": 0.52,
+          "advanceMeters": 1.25
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 9.86,
+          "convergence": 8.11,
+          "archStress": 140.4,
+          "sideWallRate": 0.46,
+          "advanceMeters": 1.28
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 10.93,
+          "convergence": 8.76,
+          "archStress": 148.6,
+          "sideWallRate": 0.54,
+          "advanceMeters": 1.31
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 11.99,
+          "convergence": 9.41,
+          "archStress": 156.8,
+          "sideWallRate": 0.62,
+          "advanceMeters": 1.34
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 13.06,
+          "convergence": 10.06,
+          "archStress": 165.0,
+          "sideWallRate": 0.7,
+          "advanceMeters": 1.37
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 11.72,
+          "convergence": 9.75,
+          "archStress": 154.0,
+          "sideWallRate": 0.64,
+          "advanceMeters": 1.4
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 12.79,
+          "convergence": 10.4,
+          "archStress": 162.2,
+          "sideWallRate": 0.72,
+          "advanceMeters": 1.43
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 13.85,
+          "convergence": 11.04,
+          "archStress": 170.4,
+          "sideWallRate": 0.8,
+          "advanceMeters": 1.46
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 14.92,
+          "convergence": 11.69,
+          "archStress": 178.6,
+          "sideWallRate": 0.88,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 13.58,
+          "convergence": 11.38,
+          "archStress": 167.6,
+          "sideWallRate": 0.81,
+          "advanceMeters": 1.52
+        }
+      ],
+      "geologyNote": "千枚岩挤压破碎，围岩有明显松弛区。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-005",
+      "name": "ZK5 掌子面",
+      "zone": "ZK5",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "V",
+      "burialDepth": 318,
+      "biasPressure": "均压",
+      "groundwaterLevel": "弱",
+      "designLevel": "B",
+      "advanceRate": 1.71,
+      "supportClosureHours": 16,
+      "reservedDeformation": 77,
+      "monitoringFrequency": "8h",
+      "currentRisk": "MEDIUM",
+      "remarks": "断层破碎带，围岩含泥量高，遇水软化敏感。",
+      "initialSupport": {
+        "shotcreteThickness": 28,
+        "boltLength": 4.5,
+        "steelArch": "H175",
+        "reservedDeformation": 110
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 10.8,
+          "convergence": 8.8,
+          "archStress": 146.0,
+          "sideWallRate": 0.44,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 11.88,
+          "convergence": 9.46,
+          "archStress": 154.2,
+          "sideWallRate": 0.52,
+          "advanceMeters": 1.52
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 12.96,
+          "convergence": 10.12,
+          "archStress": 162.4,
+          "sideWallRate": 0.6,
+          "advanceMeters": 1.55
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 14.04,
+          "convergence": 10.79,
+          "archStress": 170.6,
+          "sideWallRate": 0.68,
+          "advanceMeters": 1.58
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 12.72,
+          "convergence": 10.49,
+          "archStress": 159.6,
+          "sideWallRate": 0.62,
+          "advanceMeters": 1.61
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 13.8,
+          "convergence": 11.15,
+          "archStress": 167.8,
+          "sideWallRate": 0.7,
+          "advanceMeters": 1.64
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 14.88,
+          "convergence": 11.81,
+          "archStress": 176.0,
+          "sideWallRate": 0.78,
+          "advanceMeters": 1.67
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 15.96,
+          "convergence": 12.48,
+          "archStress": 184.2,
+          "sideWallRate": 0.86,
+          "advanceMeters": 1.7
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 14.64,
+          "convergence": 12.18,
+          "archStress": 173.2,
+          "sideWallRate": 0.8,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 15.72,
+          "convergence": 12.84,
+          "archStress": 181.4,
+          "sideWallRate": 0.88,
+          "advanceMeters": 1.76
+        }
+      ],
+      "geologyNote": "断层破碎带，围岩含泥量高，遇水软化敏感。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-006",
+      "name": "ZK6 掌子面",
+      "zone": "ZK6",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "III",
+      "burialDepth": 138,
+      "biasPressure": "右偏压",
+      "groundwaterLevel": "中等",
+      "designLevel": "B",
+      "advanceRate": 1.8,
+      "supportClosureHours": 18,
+      "reservedDeformation": 85,
+      "monitoringFrequency": "24h",
+      "currentRisk": "MEDIUM",
+      "remarks": "灰岩夹白云岩，完整性良好，地下水弱。",
+      "initialSupport": {
+        "shotcreteThickness": 18,
+        "boltLength": 3.0,
+        "steelArch": "I18",
+        "reservedDeformation": 45
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 12.8,
+          "convergence": 10.14,
+          "archStress": 159.8,
+          "sideWallRate": 0.51,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 13.89,
+          "convergence": 10.82,
+          "archStress": 168.0,
+          "sideWallRate": 0.59,
+          "advanceMeters": 1.76
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 14.99,
+          "convergence": 11.49,
+          "archStress": 176.2,
+          "sideWallRate": 0.67,
+          "advanceMeters": 1.79
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 13.68,
+          "convergence": 11.21,
+          "archStress": 165.2,
+          "sideWallRate": 0.6,
+          "advanceMeters": 1.82
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 14.78,
+          "convergence": 11.88,
+          "archStress": 173.4,
+          "sideWallRate": 0.69,
+          "advanceMeters": 1.85
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 15.87,
+          "convergence": 12.56,
+          "archStress": 181.6,
+          "sideWallRate": 0.77,
+          "advanceMeters": 1.88
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 16.97,
+          "convergence": 13.23,
+          "archStress": 189.8,
+          "sideWallRate": 0.85,
+          "advanceMeters": 1.91
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 15.66,
+          "convergence": 12.95,
+          "archStress": 178.8,
+          "sideWallRate": 0.78,
+          "advanceMeters": 1.94
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 16.76,
+          "convergence": 13.62,
+          "archStress": 187.0,
+          "sideWallRate": 0.87,
+          "advanceMeters": 1.97
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 17.86,
+          "convergence": 14.3,
+          "archStress": 195.2,
+          "sideWallRate": 0.95,
+          "advanceMeters": 2.0
+        }
+      ],
+      "geologyNote": "灰岩夹白云岩，完整性良好，地下水弱。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-007",
+      "name": "ZK7 掌子面",
+      "zone": "ZK7",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "IV",
+      "burialDepth": 246,
+      "biasPressure": "左偏压",
+      "groundwaterLevel": "较强",
+      "designLevel": "C",
+      "advanceRate": 1.89,
+      "supportClosureHours": 20,
+      "reservedDeformation": 93,
+      "monitoringFrequency": "8h",
+      "currentRisk": "HIGH",
+      "remarks": "片麻岩裂隙水发育，存在局部挤压变形。",
+      "initialSupport": {
+        "shotcreteThickness": 24,
+        "boltLength": 3.8,
+        "steelArch": "I20b",
+        "reservedDeformation": 70
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 14.8,
+          "convergence": 11.48,
+          "archStress": 173.6,
+          "sideWallRate": 0.57,
+          "advanceMeters": 1.25
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 15.91,
+          "convergence": 12.17,
+          "archStress": 181.8,
+          "sideWallRate": 0.65,
+          "advanceMeters": 1.28
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 14.62,
+          "convergence": 11.9,
+          "archStress": 170.8,
+          "sideWallRate": 0.59,
+          "advanceMeters": 1.31
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 15.73,
+          "convergence": 12.59,
+          "archStress": 179.0,
+          "sideWallRate": 0.67,
+          "advanceMeters": 1.34
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 16.84,
+          "convergence": 13.28,
+          "archStress": 187.2,
+          "sideWallRate": 0.75,
+          "advanceMeters": 1.37
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 17.95,
+          "convergence": 13.96,
+          "archStress": 195.4,
+          "sideWallRate": 0.83,
+          "advanceMeters": 1.4
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 16.66,
+          "convergence": 13.69,
+          "archStress": 184.4,
+          "sideWallRate": 0.77,
+          "advanceMeters": 1.43
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 17.77,
+          "convergence": 14.38,
+          "archStress": 192.6,
+          "sideWallRate": 0.85,
+          "advanceMeters": 1.46
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 18.88,
+          "convergence": 15.07,
+          "archStress": 200.8,
+          "sideWallRate": 0.93,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 19.99,
+          "convergence": 15.76,
+          "archStress": 209.0,
+          "sideWallRate": 1.01,
+          "advanceMeters": 1.52
+        }
+      ],
+      "geologyNote": "片麻岩裂隙水发育，存在局部挤压变形。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-008",
+      "name": "ZK8 掌子面",
+      "zone": "ZK8",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "V",
+      "burialDepth": 352,
+      "biasPressure": "均压",
+      "groundwaterLevel": "强",
+      "designLevel": "C",
+      "advanceRate": 1.98,
+      "supportClosureHours": 22,
+      "reservedDeformation": 101,
+      "monitoringFrequency": "8h",
+      "currentRisk": "HIGH",
+      "remarks": "深埋软岩段，初始应力高，岩爆与大变形并存。",
+      "initialSupport": {
+        "shotcreteThickness": 28,
+        "boltLength": 4.5,
+        "steelArch": "H175",
+        "reservedDeformation": 110
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 16.8,
+          "convergence": 12.82,
+          "archStress": 187.4,
+          "sideWallRate": 0.64,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 15.53,
+          "convergence": 12.56,
+          "archStress": 176.4,
+          "sideWallRate": 0.58,
+          "advanceMeters": 1.52
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 16.65,
+          "convergence": 13.26,
+          "archStress": 184.6,
+          "sideWallRate": 0.66,
+          "advanceMeters": 1.55
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 17.77,
+          "convergence": 13.97,
+          "archStress": 192.8,
+          "sideWallRate": 0.74,
+          "advanceMeters": 1.58
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 18.9,
+          "convergence": 14.67,
+          "archStress": 201.0,
+          "sideWallRate": 0.82,
+          "advanceMeters": 1.61
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 17.62,
+          "convergence": 14.41,
+          "archStress": 190.0,
+          "sideWallRate": 0.76,
+          "advanceMeters": 1.64
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 18.75,
+          "convergence": 15.11,
+          "archStress": 198.2,
+          "sideWallRate": 0.84,
+          "advanceMeters": 1.67
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 19.88,
+          "convergence": 15.81,
+          "archStress": 206.4,
+          "sideWallRate": 0.92,
+          "advanceMeters": 1.7
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 21.0,
+          "convergence": 16.52,
+          "archStress": 214.6,
+          "sideWallRate": 1.0,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 19.73,
+          "convergence": 16.26,
+          "archStress": 203.6,
+          "sideWallRate": 0.94,
+          "advanceMeters": 1.76
+        }
+      ],
+      "geologyNote": "深埋软岩段，初始应力高，岩爆与大变形并存。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-009",
+      "name": "ZK9 掌子面",
+      "zone": "ZK9",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "II",
+      "burialDepth": 108,
+      "biasPressure": "右偏压",
+      "groundwaterLevel": "弱",
+      "designLevel": "C",
+      "advanceRate": 2.07,
+      "supportClosureHours": 24,
+      "reservedDeformation": 109,
+      "monitoringFrequency": "24h",
+      "currentRisk": "HIGH",
+      "remarks": "弱风化花岗岩，围岩稳定。",
+      "initialSupport": {
+        "shotcreteThickness": 14,
+        "boltLength": 2.5,
+        "steelArch": "无",
+        "reservedDeformation": 35
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 16.4,
+          "convergence": 13.2,
+          "archStress": 182.0,
+          "sideWallRate": 0.56,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 17.54,
+          "convergence": 13.92,
+          "archStress": 190.2,
+          "sideWallRate": 0.64,
+          "advanceMeters": 1.76
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 18.68,
+          "convergence": 14.63,
+          "archStress": 198.4,
+          "sideWallRate": 0.72,
+          "advanceMeters": 1.79
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 19.82,
+          "convergence": 15.35,
+          "archStress": 206.6,
+          "sideWallRate": 0.8,
+          "advanceMeters": 1.82
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 18.56,
+          "convergence": 15.1,
+          "archStress": 195.6,
+          "sideWallRate": 0.74,
+          "advanceMeters": 1.85
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 19.7,
+          "convergence": 15.82,
+          "archStress": 203.8,
+          "sideWallRate": 0.82,
+          "advanceMeters": 1.88
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 20.84,
+          "convergence": 16.53,
+          "archStress": 212.0,
+          "sideWallRate": 0.9,
+          "advanceMeters": 1.91
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 21.98,
+          "convergence": 17.25,
+          "archStress": 220.2,
+          "sideWallRate": 0.98,
+          "advanceMeters": 1.94
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 20.72,
+          "convergence": 17.0,
+          "archStress": 209.2,
+          "sideWallRate": 0.92,
+          "advanceMeters": 1.97
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 21.86,
+          "convergence": 17.72,
+          "archStress": 217.4,
+          "sideWallRate": 1.0,
+          "advanceMeters": 2.0
+        }
+      ],
+      "geologyNote": "弱风化花岗岩，围岩稳定。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-010",
+      "name": "ZK10 掌子面",
+      "zone": "ZK10",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "IV",
+      "burialDepth": 232,
+      "biasPressure": "左偏压",
+      "groundwaterLevel": "中等",
+      "designLevel": "D",
+      "advanceRate": 2.16,
+      "supportClosureHours": 26,
+      "reservedDeformation": 117,
+      "monitoringFrequency": "8h",
+      "currentRisk": "CRITICAL",
+      "remarks": "泥质粉砂岩与炭质板岩互层，遇水易剥落。",
+      "initialSupport": {
+        "shotcreteThickness": 24,
+        "boltLength": 3.8,
+        "steelArch": "I20b",
+        "reservedDeformation": 70
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 18.4,
+          "convergence": 14.54,
+          "archStress": 195.8,
+          "sideWallRate": 0.63,
+          "advanceMeters": 1.25
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 19.55,
+          "convergence": 15.27,
+          "archStress": 204.0,
+          "sideWallRate": 0.71,
+          "advanceMeters": 1.28
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 20.71,
+          "convergence": 16.0,
+          "archStress": 212.2,
+          "sideWallRate": 0.79,
+          "advanceMeters": 1.31
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 19.46,
+          "convergence": 15.77,
+          "archStress": 201.2,
+          "sideWallRate": 0.73,
+          "advanceMeters": 1.34
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 20.62,
+          "convergence": 16.49,
+          "archStress": 209.4,
+          "sideWallRate": 0.81,
+          "advanceMeters": 1.37
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 21.77,
+          "convergence": 17.22,
+          "archStress": 217.6,
+          "sideWallRate": 0.89,
+          "advanceMeters": 1.4
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 22.93,
+          "convergence": 17.95,
+          "archStress": 225.8,
+          "sideWallRate": 0.97,
+          "advanceMeters": 1.43
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 21.69,
+          "convergence": 17.72,
+          "archStress": 214.8,
+          "sideWallRate": 0.91,
+          "advanceMeters": 1.46
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 22.84,
+          "convergence": 18.45,
+          "archStress": 223.0,
+          "sideWallRate": 0.99,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 24.0,
+          "convergence": 19.18,
+          "archStress": 231.2,
+          "sideWallRate": 1.07,
+          "advanceMeters": 1.52
+        }
+      ],
+      "geologyNote": "泥质粉砂岩与炭质板岩互层，遇水易剥落。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-011",
+      "name": "ZK11 掌子面",
+      "zone": "ZK11",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "V",
+      "burialDepth": 296,
+      "biasPressure": "均压",
+      "groundwaterLevel": "较强",
+      "designLevel": "D",
+      "advanceRate": 2.25,
+      "supportClosureHours": 28,
+      "reservedDeformation": 125,
+      "monitoringFrequency": "8h",
+      "currentRisk": "CRITICAL",
+      "remarks": "偏压浅埋段，地表建筑敏感，洞口变形放大。",
+      "initialSupport": {
+        "shotcreteThickness": 28,
+        "boltLength": 4.5,
+        "steelArch": "H175",
+        "reservedDeformation": 110
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 20.4,
+          "convergence": 15.88,
+          "archStress": 209.6,
+          "sideWallRate": 0.69,
+          "advanceMeters": 1.49
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 21.57,
+          "convergence": 16.62,
+          "archStress": 217.8,
+          "sideWallRate": 0.77,
+          "advanceMeters": 1.52
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 20.34,
+          "convergence": 16.4,
+          "archStress": 206.8,
+          "sideWallRate": 0.71,
+          "advanceMeters": 1.55
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 21.51,
+          "convergence": 17.14,
+          "archStress": 215.0,
+          "sideWallRate": 0.79,
+          "advanceMeters": 1.58
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 22.68,
+          "convergence": 17.89,
+          "archStress": 223.2,
+          "sideWallRate": 0.87,
+          "advanceMeters": 1.61
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 23.85,
+          "convergence": 18.63,
+          "archStress": 231.4,
+          "sideWallRate": 0.95,
+          "advanceMeters": 1.64
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 22.62,
+          "convergence": 18.41,
+          "archStress": 220.4,
+          "sideWallRate": 0.89,
+          "advanceMeters": 1.67
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 23.79,
+          "convergence": 19.15,
+          "archStress": 228.6,
+          "sideWallRate": 0.97,
+          "advanceMeters": 1.7
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 24.96,
+          "convergence": 19.89,
+          "archStress": 236.8,
+          "sideWallRate": 1.05,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 26.13,
+          "convergence": 20.63,
+          "archStress": 245.0,
+          "sideWallRate": 1.13,
+          "advanceMeters": 1.76
+        }
+      ],
+      "geologyNote": "偏压浅埋段，地表建筑敏感，洞口变形放大。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    },
+    {
+      "id": "SEC-012",
+      "name": "ZK12 掌子面",
+      "zone": "ZK12",
+      "projectId": "PJ-TUNNEL-001",
+      "rockGrade": "III",
+      "burialDepth": 168,
+      "biasPressure": "右偏压",
+      "groundwaterLevel": "强",
+      "designLevel": "D",
+      "advanceRate": 2.34,
+      "supportClosureHours": 30,
+      "reservedDeformation": 133,
+      "monitoringFrequency": "24h",
+      "currentRisk": "CRITICAL",
+      "remarks": "石英砂岩完整性中等，需常规支护。",
+      "initialSupport": {
+        "shotcreteThickness": 18,
+        "boltLength": 3.0,
+        "steelArch": "I18",
+        "reservedDeformation": 45
+      },
+      "monitoring": [
+        {
+          "date": "2026-05-01",
+          "crownSettlement": 22.4,
+          "convergence": 17.22,
+          "archStress": 223.4,
+          "sideWallRate": 0.76,
+          "advanceMeters": 1.73
+        },
+        {
+          "date": "2026-05-02",
+          "crownSettlement": 21.18,
+          "convergence": 17.01,
+          "archStress": 212.4,
+          "sideWallRate": 0.69,
+          "advanceMeters": 1.76
+        },
+        {
+          "date": "2026-05-03",
+          "crownSettlement": 22.37,
+          "convergence": 17.77,
+          "archStress": 220.6,
+          "sideWallRate": 0.78,
+          "advanceMeters": 1.79
+        },
+        {
+          "date": "2026-05-04",
+          "crownSettlement": 23.55,
+          "convergence": 18.52,
+          "archStress": 228.8,
+          "sideWallRate": 0.86,
+          "advanceMeters": 1.82
+        },
+        {
+          "date": "2026-05-05",
+          "crownSettlement": 24.74,
+          "convergence": 19.28,
+          "archStress": 237.0,
+          "sideWallRate": 0.94,
+          "advanceMeters": 1.85
+        },
+        {
+          "date": "2026-05-06",
+          "crownSettlement": 23.52,
+          "convergence": 19.07,
+          "archStress": 226.0,
+          "sideWallRate": 0.87,
+          "advanceMeters": 1.88
+        },
+        {
+          "date": "2026-05-07",
+          "crownSettlement": 24.71,
+          "convergence": 19.83,
+          "archStress": 234.2,
+          "sideWallRate": 0.96,
+          "advanceMeters": 1.91
+        },
+        {
+          "date": "2026-05-08",
+          "crownSettlement": 25.89,
+          "convergence": 20.58,
+          "archStress": 242.4,
+          "sideWallRate": 1.04,
+          "advanceMeters": 1.94
+        },
+        {
+          "date": "2026-05-09",
+          "crownSettlement": 27.08,
+          "convergence": 21.34,
+          "archStress": 250.6,
+          "sideWallRate": 1.12,
+          "advanceMeters": 1.97
+        },
+        {
+          "date": "2026-05-10",
+          "crownSettlement": 25.86,
+          "convergence": 21.13,
+          "archStress": 239.6,
+          "sideWallRate": 1.05,
+          "advanceMeters": 2.0
+        }
+      ],
+      "geologyNote": "石英砂岩完整性中等，需常规支护。",
+      "controlPoints": [
+        "控制掌子面至仰拱闭合时差",
+        "监测拱顶沉降与周边收敛同步增长",
+        "超前支护与锁脚锚杆必须在当班闭合"
+      ]
+    }
+  ],
+  "predictions": [
+    {
+      "id": "PRED-2C2E5ED482",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    },
+    {
+      "id": "PRED-DB517F89ED",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    },
+    {
+      "id": "PRED-F0BBDB9EB9",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    },
+    {
+      "id": "PRED-D4C38EC5E8",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    },
+    {
+      "id": "PRED-2F4B8FA3AA",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    },
+    {
+      "id": "PRED-2F0BB034E9",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    },
+    {
+      "id": "PRED-808B3ED607",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    },
+    {
+      "id": "PRED-50D9012E76",
+      "sectionId": "SEC-005",
+      "sectionName": "ZK5 掌子面",
+      "scenarioName": "暴雨叠加快速进尺",
+      "generatedAt": "2026-05-15T11:00:00",
+      "riskScore": 100,
+      "riskLevel": "CRITICAL",
+      "predictedSettlement": [
+        16.63,
+        17.55,
+        18.46,
+        19.38,
+        20.29,
+        21.2,
+        22.12
+      ],
+      "predictedConvergence": [
+        13.62,
+        14.39,
+        15.17,
+        15.95,
+        16.72,
+        17.5,
+        18.28
+      ],
+      "trendIncrement": 0.758,
+      "recommendedSupportLevel": "E",
+      "notes": [
+        "围岩级别 V，日增量基于近 4 次监测趋势外推。",
+        "施工扰动系数按 1.30 计入，降雨放大系数按 1.10 计入。",
+        "若周边收敛超过 53.9 mm，应提前转入复核会商。"
+      ]
+    }
+  ],
+  "recommendations": [
+    {
+      "id": "REC-5E4861FE52",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-4DFC411571",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    },
+    {
+      "id": "REC-FB7E02C198",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-09CABE6CC1",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    },
+    {
+      "id": "REC-0B9039F5A5",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-9B36BBC3A3",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    },
+    {
+      "id": "REC-4AB05BC564",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-2F9E788F04",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    },
+    {
+      "id": "REC-B07FB698F5",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-791BB8F081",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    },
+    {
+      "id": "REC-D6B0C43934",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-DF3A051A6E",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    },
+    {
+      "id": "REC-2B7A61A1F2",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-A4DE782744",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    },
+    {
+      "id": "REC-0A93408F6F",
+      "sectionId": "SEC-008",
+      "sectionName": "ZK8 掌子面",
+      "generatedAt": "2026-05-15T11:10:00",
+      "predictionId": "PRED-72ADD75D50",
+      "level": "E",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。",
+      "measures": [
+        "初期支护闭合时差控制在 8 小时内。",
+        "采用 全断面预加固 + 双层钢拱架，锁脚锚杆与钢拱架同步施工。",
+        "监测频率提升至 2 小时 1 次，并设置超限短信推送。",
+        "当预测周边收敛日增量连续 2 天大于 1.5 mm 时，启动设计复核流程。"
+      ],
+      "materialPlan": {
+        "shotcreteThicknessCm": 36,
+        "boltLengthM": 5.0,
+        "boltSpacing": "0.7m x 0.7m",
+        "steelArchSpacing": "0.35m",
+        "reservedDeformationMm": 111
+      },
+      "comparison": {
+        "initialShotcreteThicknessCm": 28,
+        "suggestedShotcreteThicknessCm": 36,
+        "initialBoltLengthM": 4.5,
+        "suggestedBoltLengthM": 5.0,
+        "riskScoreBefore": 100,
+        "riskScoreAfterMeasure": 88.0
+      },
+      "decisionBasis": [
+        "当前拱顶沉降 19.73 mm，周边收敛 16.26 mm。",
+        "围岩级别 V，埋深 352 m，地下水 强。",
+        "监测速率 -1.27 / -0.26 mm·d，呈连续增长。"
+      ]
+    }
+  ],
+  "auditTrail": [
+    {
+      "id": "REC-5E4861FE52",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    },
+    {
+      "id": "REC-FB7E02C198",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    },
+    {
+      "id": "REC-0B9039F5A5",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    },
+    {
+      "id": "REC-4AB05BC564",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    },
+    {
+      "id": "REC-B07FB698F5",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    },
+    {
+      "id": "REC-D6B0C43934",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    },
+    {
+      "id": "REC-2B7A61A1F2",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    },
+    {
+      "id": "REC-0A93408F6F",
+      "type": "support_recommendation",
+      "sectionId": "SEC-008",
+      "createdAt": "2026-05-15T11:10:00",
+      "summary": "ZK8 建议采用 E 级支护，喷射混凝土 36 cm，锚杆长度 5.0 m，拱架间距 0.35m。"
+    }
+  ]
+}

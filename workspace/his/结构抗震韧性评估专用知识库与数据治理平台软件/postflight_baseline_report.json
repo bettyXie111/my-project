@@ -1,0 +1,65 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "exists:结构抗震韧性评估专用知识库与数据治理平台软件需求规格说明书.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\结构抗震韧性评估专用知识库与数据治理平台软件需求规格说明书.md"
+    },
+    {
+      "name": "exists:结构抗震韧性评估专用知识库与数据治理平台软件操作手册.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\结构抗震韧性评估专用知识库与数据治理平台软件操作手册.md"
+    },
+    {
+      "name": "exists:结构抗震韧性评估专用知识库与数据治理平台软件操作手册.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\结构抗震韧性评估专用知识库与数据治理平台软件操作手册.docx"
+    },
+    {
+      "name": "exists:结构抗震韧性评估专用知识库与数据治理平台软件操作手册.pdf",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\结构抗震韧性评估专用知识库与数据治理平台软件操作手册.pdf"
+    },
+    {
+      "name": "exists:结构抗震韧性评估专用知识库与数据治理平台软件源代码文档.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\结构抗震韧性评估专用知识库与数据治理平台软件源代码文档.md"
+    },
+    {
+      "name": "exists:结构抗震韧性评估专用知识库与数据治理平台软件源代码文档.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\结构抗震韧性评估专用知识库与数据治理平台软件源代码文档.docx"
+    },
+    {
+      "name": "exists:结构抗震韧性评估专用知识库与数据治理平台软件源代码文档.pdf",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\结构抗震韧性评估专用知识库与数据治理平台软件源代码文档.pdf"
+    },
+    {
+      "name": "exists:软件著作权登记申请表.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\软件著作权登记申请表.md"
+    },
+    {
+      "name": "exists:软件著作权登记申请表.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\结构抗震韧性评估专用知识库与数据治理平台软件\\软件著作权登记申请表.docx"
+    },
+    {
+      "name": "images_dir",
+      "passed": true,
+      "message": "count=16, min_required=8"
+    },
+    {
+      "name": "manual_image_refs",
+      "passed": true,
+      "message": "refs=16, min_required=8, missing=[]"
+    },
+    {
+      "name": "pipeline_report",
+      "passed": true,
+      "message": "ok"
+    }
+  ]
+}

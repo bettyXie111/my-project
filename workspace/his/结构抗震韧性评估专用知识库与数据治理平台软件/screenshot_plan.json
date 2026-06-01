@@ -1,0 +1,24 @@
+[
+  {"figure":"图1-1","filename":"fig-1-1-login-full.png","page":"login"},
+  {"figure":"图2-1","filename":"fig-2-1-home-full.png","page":"home"},
+
+  {"figure":"图3-1","filename":"fig-3-1-projects.png","hash":"projects"},
+  {"figure":"图3-2","filename":"fig-3-2-projects-create.png","hash":"projects","action":"create","modal":"true","clickSelector":"#btn-create","waitSelector":"#modal.modal-shell.modal [role='dialog']"},
+  {"figure":"图3-2a","filename":"fig-3-2a-projects-edit.png","hash":"projects","action":"edit","modal":"true","clickSelector":"#tbody button[data-act='edit']","waitSelector":"#modal.modal-shell.modal [role='dialog']"},
+  {"figure":"图3-2b","filename":"fig-3-2b-projects-delete.png","hash":"projects","action":"delete","modal":"true","clickSelector":"#tbody button[data-act='delete']","waitSelector":"#modal.modal-shell.modal [role='dialog']"},
+
+  {"figure":"图3-3","filename":"fig-3-3-structures.png","hash":"structures"},
+  {"figure":"图3-4","filename":"fig-3-4-structures-view.png","hash":"structures","action":"view","modal":"true","clickSelector":"#tbody button[data-act='view']","waitSelector":"#modal.modal-shell.modal [role='dialog']"},
+
+  {"figure":"图3-5","filename":"fig-3-5-datasets.png","hash":"datasets"},
+  {"figure":"图3-6","filename":"fig-3-6-datasets-create.png","hash":"datasets","action":"create","modal":"true","clickSelector":"#btn-create","waitSelector":"#modal.modal-shell.modal [role='dialog']"},
+
+  {"figure":"图3-7","filename":"fig-3-7-quality.png","hash":"quality"},
+  {"figure":"图3-8","filename":"fig-3-8-quality-run.png","hash":"quality","action":"view","modal":"true","clickSelector":"#tbody button[data-act='view']","waitSelector":"#modal.modal-shell.modal [role='dialog']"},
+
+  {"figure":"图3-9","filename":"fig-3-9-indicators.png","hash":"indicators"},
+  {"figure":"图3-10","filename":"fig-3-10-assessments.png","hash":"assessments"},
+
+  {"figure":"图3-11","filename":"fig-3-11-knowledge.png","hash":"knowledge"},
+  {"figure":"图3-12","filename":"fig-3-12-audit.png","hash":"audit"}
+]

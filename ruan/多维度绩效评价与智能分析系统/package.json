@@ -1,0 +1,18 @@
+{
+  "name": "ruan",
+  "version": "1.0.0",
+  "description": "基于最新需求文档生成的可运行 Web 系统，目录结构遵循 PRD 中的 `apps/web`、`apps/api`、`packages/shared-contracts`、`scripts` 约定。考虑到当前环境没有 `Node`、`Java`、`Maven` 和第三方 Python Web 框架，本实现采用 **Python 标准库后端 + 零构建静态前端**，但保留了需求文档要求的模块边界、接口契约、种子数据、权限、审批和自动化测试。",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "playwright": "^1.60.0"
+  }
+}

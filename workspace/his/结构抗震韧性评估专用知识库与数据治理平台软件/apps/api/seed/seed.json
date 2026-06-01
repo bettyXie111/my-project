@@ -1,0 +1,23 @@
+{
+  "users": [
+    {"username": "admin", "password": "admin123", "role": "admin", "display_name": "系统管理员"},
+    {"username": "eng1", "password": "eng123", "role": "engineer", "display_name": "评估工程师-林工"},
+    {"username": "gov1", "password": "gov123", "role": "governance", "display_name": "治理专员-周工"},
+    {"username": "rev1", "password": "rev123", "role": "reviewer", "display_name": "复核员-李工"}
+  ],
+  "projects": [
+    {"name": "滨海新区公共建筑抗震韧性专项评估", "region": "滨海新区", "site_class": "II类场地", "importance": "乙类", "owner": "eng1"},
+    {"name": "山地城镇桥梁群震后功能恢复评估", "region": "西南山区", "site_class": "III类场地", "importance": "甲类", "owner": "eng1"}
+  ],
+  "structures": [
+    {"project_id": 1, "name": "A区综合体-1号楼", "type": "框架-剪力墙", "year_built": 2012, "stories": 18, "material_system": "钢筋混凝土", "fortification_intensity": "7度(0.10g)"},
+    {"project_id": 1, "name": "A区综合体-地下连通体", "type": "地下结构", "year_built": 2012, "stories": 2, "material_system": "钢筋混凝土", "fortification_intensity": "7度(0.10g)"},
+    {"project_id": 2, "name": "峡谷快速路-1#连续梁桥", "type": "预应力混凝土连续梁", "year_built": 2008, "stories": 1, "material_system": "预应力混凝土", "fortification_intensity": "8度(0.20g)"}
+  ],
+  "datasets": [
+    {"name": "构件清单-现场核查表", "category": "构件台账", "owner": "gov1", "source_desc": "2026年现场调查与竣工图对照形成", "sensitivity_level": "内部"},
+    {"name": "材料检测-混凝土回弹与取芯", "category": "材料检测", "owner": "gov1", "source_desc": "第三方检测单位报告（抽样）", "sensitivity_level": "内部"},
+    {"name": "监测数据-加速度与层间位移", "category": "结构监测", "owner": "gov1", "source_desc": "临时布设传感器采集，时间窗为三个月", "sensitivity_level": "受限"}
+  ]
+}
+

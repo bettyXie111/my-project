@@ -1,0 +1,53 @@
+{
+  "name": "enterprise-operations-platform-contracts",
+  "version": "1.0.0",
+  "basePath": "/api/v1",
+  "modules": {
+    "auth": [
+      "POST /auth/login",
+      "POST /auth/refresh",
+      "GET /users/me"
+    ],
+    "workflow": [
+      "GET /workflows/templates",
+      "POST /workflows/templates",
+      "GET /approvals/tasks",
+      "POST /approvals/tasks/{taskId}/actions"
+    ],
+    "sales": [
+      "GET /sales/orders",
+      "POST /sales/orders",
+      "GET /contracts",
+      "POST /contracts"
+    ],
+    "procurement": [
+      "GET /procurement/requests",
+      "POST /procurement/requests",
+      "GET /procurement/orders",
+      "POST /procurement/orders"
+    ],
+    "inventory": [
+      "GET /inventory/balances",
+      "POST /inventory/receipts"
+    ],
+    "finance": [
+      "GET /finance/budgets",
+      "POST /finance/budgets",
+      "GET /finance/expenses",
+      "POST /finance/expenses",
+      "GET /finance/payment-requests",
+      "POST /finance/payment-requests",
+      "GET /finance/receipts",
+      "POST /finance/receipts"
+    ],
+    "dashboard": [
+      "GET /dashboard/operations"
+    ],
+    "audit": [
+      "GET /audit-logs",
+      "GET /notifications",
+      "POST /notifications/{notificationId}/read",
+      "POST /files/presign"
+    ]
+  }
+}

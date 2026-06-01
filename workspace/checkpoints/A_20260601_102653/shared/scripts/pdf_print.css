@@ -1,0 +1,64 @@
+/* Legacy print CSS for Pandoc HTML -> Edge/Chromium PDF.
+   NOTE: PDF 已统一改为 Word 从 docx 直接导出；此文件仅保留用于历史回滚/排查。
+*/
+
+@page {
+  size: A4;
+  margin: 25.4mm;
+}
+
+html,
+body {
+  font-family: "Times New Roman", "宋体", SimSun, serif;
+  font-size: 12pt;
+  line-height: 1.5;
+  color: #000;
+}
+
+code,
+pre,
+kbd,
+samp {
+  font-family: "Times New Roman", "宋体", SimSun, serif;
+  font-size: 10.5pt;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", "宋体", SimSun, serif;
+  font-weight: 700;
+}
+
+table {
+  border-collapse: collapse;
+}
+
+table,
+th,
+td {
+  border: 1px solid #000;
+}
+
+/* Images: avoid clipping in Chromium print-to-PDF.
+   - Constrain to printable area (A4 height minus margins).
+   - Keep aspect ratio and prevent page-break splitting a single figure.
+*/
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  max-height: 246mm;
+  object-fit: contain;
+  page-break-inside: avoid;
+  break-inside: avoid;
+}
+
+figure,
+p:has(img) {
+  page-break-inside: avoid;
+  break-inside: avoid;
+}

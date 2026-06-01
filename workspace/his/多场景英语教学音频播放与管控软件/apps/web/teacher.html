@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>教师端 - 多场景英语教学音频播放与管控软件</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <div class="brand-title">教师端</div>
+            <div class="brand-sub">课时 / 片段 / 控制台 / 时间轴</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="./index.html">入口</a>
+          <a class="nav-link active" href="./teacher.html">教师端</a>
+          <a class="nav-link" href="./student.html">学生端</a>
+          <a class="nav-link" href="./admin.html">管理端</a>
+        </nav>
+        <div class="who" id="who">未登录</div>
+      </header>
+
+      <main class="grid">
+        <section class="card span3 banner hidden" id="banner"></section>
+
+        <section class="card">
+          <h2>登录</h2>
+          <div class="row">
+            <label>账号</label>
+            <input id="u" placeholder="teacher" />
+          </div>
+          <div class="row">
+            <label>密码</label>
+            <input id="p" type="password" placeholder="demo" />
+          </div>
+          <button id="btnLogin" class="btn primary">登录</button>
+          <div class="hint">演示账号：teacher；密码：demo</div>
+        </section>
+
+        <section class="card">
+          <h2>场景与设备</h2>
+          <div class="row">
+            <label>场景</label>
+            <select id="sceneSelect"></select>
+          </div>
+          <div class="devices" id="devices"></div>
+        </section>
+
+        <section class="card span2">
+          <h2>课时与片段</h2>
+          <div class="row">
+            <label>课时</label>
+            <select id="lessonSelect"></select>
+            <button id="btnAddLesson" class="btn">新增</button>
+            <button id="btnEditLesson" class="btn">编辑</button>
+            <button id="btnDeleteLesson" class="btn">删除</button>
+            <button id="btnStart" class="btn primary">开始上课</button>
+          </div>
+          <div class="clips" id="clips"></div>
+        </section>
+
+        <section class="card span2">
+          <h2>课堂控制台</h2>
+          <div class="controls">
+            <button id="btnPlay" class="btn primary">播放</button>
+            <button id="btnPause" class="btn">暂停</button>
+            <button id="btnLoop" class="btn">A-B 循环</button>
+            <button id="btnSpeed" class="btn">倍速 1.2x</button>
+            <button id="btnEnd" class="btn">结束上课</button>
+          </div>
+          <div class="controls">
+            <button id="btnAddClip" class="btn">新增</button>
+            <button id="btnEditClip" class="btn">编辑</button>
+            <button id="btnDeleteClip" class="btn">删除</button>
+          </div>
+          <div class="policy" id="policy"></div>
+          <div class="timeline" id="timeline"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./teacher.js"></script>
+  </body>
+</html>
+

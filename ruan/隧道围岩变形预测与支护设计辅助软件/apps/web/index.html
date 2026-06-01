@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>隧道围岩变形预测与支护设计辅助软件</title>
+    <link rel="stylesheet" href="/assets/styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <aside class="login-panel" id="login-panel">
+        <div class="brand-mark">
+          <div class="brand-mark__chip">GEO-LINER</div>
+          <div class="brand-mark__title">隧道围岩变形预测与支护设计辅助软件</div>
+          <div class="brand-mark__subtitle">围岩分级、监测趋势、支护复核三联动控制台</div>
+        </div>
+        <form id="login-form" class="login-form" novalidate>
+          <label>
+            <span>账号</span>
+            <input type="text" name="username" value="admin" autocomplete="username" />
+          </label>
+          <label>
+            <span>密码</span>
+            <input type="password" name="password" value="admin123" autocomplete="current-password" />
+          </label>
+          <button type="submit">进入控制台</button>
+        </form>
+        <div id="login-message" class="login-message" aria-live="polite"></div>
+        <div class="login-note">
+          <p>推荐演示账号：</p>
+          <ul>
+            <li><code>admin / admin123</code> 总控台管理员</li>
+            <li><code>monitor / admin123</code> 监测工程师</li>
+            <li><code>support / admin123</code> 支护设计师</li>
+          </ul>
+        </div>
+      </aside>
+      <main class="app-shell hidden" id="app-shell">
+        <header class="topbar">
+          <div>
+            <p class="eyebrow">Tunnel Rock Console</p>
+            <h1>围岩变形预测与支护决策控制台</h1>
+          </div>
+          <div class="topbar__actions">
+            <div class="user-pill" id="user-pill"></div>
+            <button id="logout-btn" class="ghost-button" type="button">退出</button>
+          </div>
+        </header>
+        <div class="workspace">
+          <nav class="sidenav" aria-label="主导航">
+            <a href="#dashboard" data-route="dashboard">总览面板</a>
+            <a href="#sections" data-route="sections">区段台账</a>
+            <a href="#analysis" data-route="analysis">变形预测</a>
+            <a href="#designs" data-route="designs">支护复核</a>
+            <a href="#alarms" data-route="alarms">预警处置</a>
+            <a href="#reports" data-route="reports">交付校核</a>
+          </nav>
+          <section class="content-area" id="content-area"></section>
+        </div>
+      </main>
+    </div>
+    <script type="module" src="/assets/app.js"></script>
+  </body>
+</html>
+

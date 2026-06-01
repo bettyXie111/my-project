@@ -1,0 +1,50 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "project_dir",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\1-VR多模态交互媒介内容创作与发布系统"
+    },
+    {
+      "name": "prompt_rule_leak",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "prd_optional",
+      "passed": true,
+      "message": "chars=4414"
+    },
+    {
+      "name": "utf8:automation_prompt.md",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "utf8:pipeline_guard.py",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "utf8:build_materials.py",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "utf8:manual_style_validator.py",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "code_files_optional",
+      "passed": true,
+      "message": "count=18 (allowed before stage-2)"
+    },
+    {
+      "name": "code_files_present",
+      "passed": true,
+      "message": "count=18"
+    }
+  ]
+}

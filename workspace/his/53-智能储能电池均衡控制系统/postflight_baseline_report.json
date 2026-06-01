@@ -1,0 +1,95 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "exists:智能储能电池均衡控制系统需求规格说明书.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统需求规格说明书.md"
+    },
+    {
+      "name": "exists:智能储能电池均衡控制系统操作手册.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统操作手册.md"
+    },
+    {
+      "name": "exists:智能储能电池均衡控制系统操作手册.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统操作手册.docx"
+    },
+    {
+      "name": "exists:智能储能电池均衡控制系统操作手册.pdf",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统操作手册.pdf"
+    },
+    {
+      "name": "exists:智能储能电池均衡控制系统源代码文档.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统源代码文档.md"
+    },
+    {
+      "name": "exists:智能储能电池均衡控制系统源代码文档.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统源代码文档.docx"
+    },
+    {
+      "name": "exists:智能储能电池均衡控制系统源代码文档.pdf",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统源代码文档.pdf"
+    },
+    {
+      "name": "exists:软件著作权登记申请表.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\软件著作权登记申请表.md"
+    },
+    {
+      "name": "exists:软件著作权登记申请表.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\软件著作权登记申请表.docx"
+    },
+    {
+      "name": "images_dir",
+      "passed": true,
+      "message": "count=12, min_required=8"
+    },
+    {
+      "name": "images_unique_hash",
+      "passed": true,
+      "message": "duplicate_count=0, max_allowed=1, groups=[]"
+    },
+    {
+      "name": "manual_image_refs",
+      "passed": true,
+      "message": "refs=12, min_required=8, missing=[]"
+    },
+    {
+      "name": "pipeline_report",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "source_doc_purity",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "source_doc_real_modules",
+      "passed": true,
+      "message": "file_headers=159, min_required=12"
+    },
+    {
+      "name": "source_pdf_exists",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\智能储能电池均衡控制系统源代码文档.pdf"
+    },
+    {
+      "name": "source_doc_no_blanks",
+      "passed": true,
+      "message": "blank_lines=0, total_lines=3000, ratio=0.0000, max_ratio=0.02"
+    },
+    {
+      "name": "source_doc_no_filler_lines",
+      "passed": true,
+      "message": "ok"
+    }
+  ]
+}

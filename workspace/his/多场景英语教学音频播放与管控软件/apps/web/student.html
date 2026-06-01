@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>学生端 - 多场景英语教学音频播放与管控软件</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <div class="brand-title">学生端</div>
+            <div class="brand-sub">事件跟随 / 场景策略</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="./index.html">入口</a>
+          <a class="nav-link" href="./teacher.html">教师端</a>
+          <a class="nav-link active" href="./student.html">学生端</a>
+          <a class="nav-link" href="./admin.html">管理端</a>
+        </nav>
+        <div class="who" id="who">未登录</div>
+      </header>
+
+      <main class="grid">
+        <section class="card span3 banner hidden" id="banner"></section>
+
+        <section class="card">
+          <h2>登录</h2>
+          <div class="row">
+            <label>账号</label>
+            <input id="u" placeholder="student" />
+          </div>
+          <div class="row">
+            <label>密码</label>
+            <input id="p" type="password" placeholder="demo" />
+          </div>
+          <button id="btnLogin" class="btn primary">登录</button>
+          <div class="hint">演示账号：student；密码：demo</div>
+        </section>
+
+        <section class="card span2">
+          <h2>课堂会话</h2>
+          <div class="row">
+            <label>Session</label>
+            <input id="sessionId" placeholder="输入 session id（由教师端开始上课生成）" />
+            <button id="btnFollow" class="btn primary">开始跟随</button>
+          </div>
+          <div class="policy" id="policy"></div>
+          <div class="timeline" id="timeline"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./student.js"></script>
+  </body>
+</html>
+

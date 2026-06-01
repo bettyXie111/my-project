@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>管理端 - 多场景英语教学音频播放与管控软件</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo"></div>
+          <div>
+            <div class="brand-title">管理端</div>
+            <div class="brand-sub">场景策略配置 / 设备在线</div>
+          </div>
+        </div>
+        <nav class="nav">
+          <a class="nav-link" href="./index.html">入口</a>
+          <a class="nav-link" href="./teacher.html">教师端</a>
+          <a class="nav-link" href="./student.html">学生端</a>
+          <a class="nav-link active" href="./admin.html">管理端</a>
+        </nav>
+        <div class="who" id="who">未登录</div>
+      </header>
+
+      <main class="grid">
+        <section class="card span3 banner hidden" id="banner"></section>
+
+        <section class="card">
+          <h2>登录</h2>
+          <div class="row">
+            <label>账号</label>
+            <input id="u" placeholder="admin" />
+          </div>
+          <div class="row">
+            <label>密码</label>
+            <input id="p" type="password" placeholder="demo" />
+          </div>
+          <button id="btnLogin" class="btn primary">登录</button>
+          <div class="hint">演示账号：admin；密码：demo</div>
+        </section>
+
+        <section class="card span2">
+          <h2>场景策略</h2>
+          <div class="row">
+            <label>场景</label>
+            <select id="sceneSelect"></select>
+            <button id="btnSave" class="btn primary">保存策略</button>
+          </div>
+          <div class="policy-editor">
+            <label class="chk"><input type="checkbox" id="c_force_sync" /> 强制同步</label>
+            <label class="chk"><input type="checkbox" id="c_student_seek" /> 学生跳转</label>
+            <label class="chk"><input type="checkbox" id="c_student_speed" /> 学生倍速</label>
+            <label class="chk"><input type="checkbox" id="c_student_loop" /> 学生循环</label>
+          </div>
+          <div class="hint">保存后会影响新开课会话的策略读取。</div>
+        </section>
+
+        <section class="card span3">
+          <h2>设备在线</h2>
+          <div class="devices" id="devices"></div>
+        </section>
+      </main>
+    </div>
+    <script type="module" src="./admin.js"></script>
+  </body>
+</html>
+

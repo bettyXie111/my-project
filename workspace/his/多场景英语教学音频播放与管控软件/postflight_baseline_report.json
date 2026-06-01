@@ -1,0 +1,70 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "exists:多场景英语教学音频播放与管控软件需求规格说明书.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\多场景英语教学音频播放与管控软件需求规格说明书.md"
+    },
+    {
+      "name": "exists:多场景英语教学音频播放与管控软件操作手册.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\多场景英语教学音频播放与管控软件操作手册.md"
+    },
+    {
+      "name": "exists:多场景英语教学音频播放与管控软件操作手册.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\多场景英语教学音频播放与管控软件操作手册.docx"
+    },
+    {
+      "name": "exists:多场景英语教学音频播放与管控软件操作手册.pdf",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\多场景英语教学音频播放与管控软件操作手册.pdf"
+    },
+    {
+      "name": "exists:多场景英语教学音频播放与管控软件源代码文档.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\多场景英语教学音频播放与管控软件源代码文档.md"
+    },
+    {
+      "name": "exists:多场景英语教学音频播放与管控软件源代码文档.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\多场景英语教学音频播放与管控软件源代码文档.docx"
+    },
+    {
+      "name": "exists:多场景英语教学音频播放与管控软件源代码文档.pdf",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\多场景英语教学音频播放与管控软件源代码文档.pdf"
+    },
+    {
+      "name": "exists:软件著作权登记申请表.md",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\软件著作权登记申请表.md"
+    },
+    {
+      "name": "exists:软件著作权登记申请表.docx",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\多场景英语教学音频播放与管控软件\\软件著作权登记申请表.docx"
+    },
+    {
+      "name": "images_dir",
+      "passed": true,
+      "message": "count=12, min_required=8"
+    },
+    {
+      "name": "images_unique_hash",
+      "passed": true,
+      "message": "duplicate_count=0, max_allowed=1, groups=[]"
+    },
+    {
+      "name": "manual_image_refs",
+      "passed": true,
+      "message": "refs=12, min_required=8, missing=[]"
+    },
+    {
+      "name": "pipeline_report",
+      "passed": true,
+      "message": "ok"
+    }
+  ]
+}

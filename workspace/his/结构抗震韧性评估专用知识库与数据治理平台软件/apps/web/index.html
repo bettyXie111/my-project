@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>结构抗震韧性评估专用知识库与数据治理平台软件</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="topbar">
+        <div class="brand">
+          <div class="logo-grid"></div>
+          <div class="brand-text">
+            <div class="brand-title">抗震韧性知识库与数据治理</div>
+            <div class="brand-sub">工程蓝图 · 可追溯评估链路</div>
+          </div>
+        </div>
+        <div class="userbox" id="userbox">
+          <span class="pill" id="role-pill">未登录</span>
+          <button class="btn btn-ghost" id="btn-logout">退出</button>
+        </div>
+      </header>
+
+      <main class="main">
+        <aside class="sidebar">
+          <nav class="nav">
+            <a href="#home" class="nav-item" data-hash="home">首页概览</a>
+            <a href="#projects" class="nav-item" data-hash="projects">项目台账</a>
+            <a href="#structures" class="nav-item" data-hash="structures">结构对象</a>
+            <a href="#datasets" class="nav-item" data-hash="datasets">数据集治理</a>
+            <a href="#quality" class="nav-item" data-hash="quality">质量检查</a>
+            <a href="#indicators" class="nav-item" data-hash="indicators">指标配置</a>
+            <a href="#assessments" class="nav-item" data-hash="assessments">评估记录</a>
+            <a href="#knowledge" class="nav-item" data-hash="knowledge">知识条目</a>
+            <a href="#audit" class="nav-item" data-hash="audit">审计留痕</a>
+          </nav>
+          <div class="sidebar-foot">
+            <div class="hint">提示：演示账号 admin/admin123</div>
+            <div class="hint">主题：深海蓝 + 网格纸底纹</div>
+          </div>
+        </aside>
+
+        <section class="content">
+          <section class="panel" id="panel-login">
+            <h2>登录</h2>
+            <p class="muted">本系统为结构抗震韧性评估场景提供知识库与数据治理能力，所有关键操作保留审计留痕。</p>
+            <form id="login-form" class="form">
+              <label class="field">
+                <span>用户名</span>
+                <input name="username" autocomplete="username" placeholder="admin" />
+              </label>
+              <label class="field">
+                <span>密码</span>
+                <input name="password" type="password" autocomplete="current-password" placeholder="admin123" />
+              </label>
+              <div class="row">
+                <button class="btn btn-primary" type="submit">登录</button>
+                <span class="muted" id="login-msg"></span>
+              </div>
+            </form>
+          </section>
+
+          <section class="panel hidden" id="panel-main">
+            <div class="panel-head">
+              <div>
+                <h2 id="view-title">首页概览</h2>
+                <div class="muted" id="view-desc">从“数据版本—质量记录—指标—评估”链路追溯证据。</div>
+              </div>
+              <div class="actions">
+                <button class="btn btn-ghost" id="btn-refresh">刷新</button>
+                <button class="btn btn-accent" id="btn-create">新增</button>
+              </div>
+            </div>
+
+            <div class="grid" id="cards"></div>
+
+            <div class="table-wrap">
+              <table class="table" id="table">
+                <thead id="thead"></thead>
+                <tbody id="tbody"></tbody>
+              </table>
+            </div>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <div class="modal-shell hidden" id="modal">
+      <div class="modal-mask"></div>
+      <div class="modal-body" role="dialog" aria-modal="true">
+        <div class="modal-head">
+          <div class="modal-title" id="modal-title">查看</div>
+          <button class="icon-btn" id="modal-close">×</button>
+        </div>
+        <div class="modal-content" id="modal-content"></div>
+        <div class="modal-foot" id="modal-foot"></div>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

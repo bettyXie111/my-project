@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-05-31T16:52:35",
+  "tool": "run_ai_slop_detector.py",
+  "grade": "Clean",
+  "total_flags": 1,
+  "domains": {
+    "text": 0,
+    "frontend": 0,
+    "code": 1
+  },
+  "fixed": [],
+  "remaining": [
+    {
+      "domain": "code",
+      "rule": "generic_var_names",
+      "severity": 1,
+      "file": "apps/api/routers/samples.py",
+      "sample": "app_db_path = Path(__file__).resolve().parents[3] / \"data\" / \"app.db\""
+    }
+  ]
+}

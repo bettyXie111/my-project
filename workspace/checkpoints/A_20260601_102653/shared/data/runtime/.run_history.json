@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "items": {
+    "2026-05-27|25|工商企业人力资源优化配置系统": {
+      "status": "success",
+      "ts": "2026-05-29T09:33:37",
+      "out": "E:\\copyRight\\workspace\\20260527\\25-工商企业人力资源优化配置系统\\pipeline_report.latest.json"
+    },
+    "2026-05-29|26|机电节能与碳排放集中管控系统": {
+      "status": "fail",
+      "ts": "2026-05-29T09:38:14",
+      "error": "pipeline_guard failed with code 1"
+    }
+  }
+}

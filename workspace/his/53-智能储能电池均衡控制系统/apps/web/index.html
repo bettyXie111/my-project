@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>智能储能电池均衡控制系统</title>
+  <style>
+    :root{--bg:#0b1020;--panel:#111a35;--text:#e9eeff;--muted:#a7b2da;--accent:#63f2d2;--warn:#ffb44a;--danger:#ff5b6e;}
+    body{margin:0;font-family:Segoe UI,Microsoft YaHei,sans-serif;background:linear-gradient(180deg,#070a14,var(--bg));color:var(--text);}
+    header{position:sticky;top:0;backdrop-filter:blur(10px);background:rgba(17,26,53,.78);border-bottom:1px solid rgba(99,242,210,.18);padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:12px;}
+    header .brand{font-weight:800;letter-spacing:.5px;}
+    header .badge{font-size:12px;color:var(--accent);border:1px solid rgba(99,242,210,.35);padding:4px 10px;border-radius:999px;}
+    main{max-width:1180px;margin:18px auto;padding:0 18px 28px;display:grid;grid-template-columns:260px 1fr;gap:16px;}
+    nav{background:rgba(17,26,53,.72);border:1px solid rgba(99,242,210,.12);border-radius:14px;padding:12px;}
+    nav a{display:block;color:var(--muted);text-decoration:none;padding:10px 10px;border-radius:10px;}
+    nav a:hover{background:rgba(99,242,210,.08);color:var(--text);}
+    .panel{background:rgba(17,26,53,.72);border:1px solid rgba(99,242,210,.12);border-radius:14px;padding:14px;}
+    .k{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;color:var(--accent);}
+    .hidden{display:none !important;}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
+    .card{background:rgba(9,12,24,.55);border:1px solid rgba(99,242,210,.12);border-radius:12px;padding:12px;}
+    .card h3{margin:0 0 8px;font-size:14px;color:var(--accent);}
+    .hint{color:var(--muted);font-size:12px;line-height:1.6;}
+    .row{display:grid;gap:10px;margin-top:10px;}
+    input{padding:10px 12px;border-radius:10px;border:1px solid rgba(99,242,210,.18);background:rgba(255,255,255,.05);color:var(--text);}
+    button{cursor:pointer;border-radius:10px;border:1px solid rgba(99,242,210,.22);background:rgba(99,242,210,.10);color:var(--text);padding:8px 12px;}
+    button:hover{background:rgba(99,242,210,.16);}
+    button.danger{border-color:rgba(255,91,110,.35);background:rgba(255,91,110,.12);}
+    #modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:center;justify-content:center;}
+    #modal .dialog{width:min(720px,92vw);background:rgba(17,26,53,.96);border:1px solid rgba(99,242,210,.18);border-radius:14px;box-shadow:0 24px 80px rgba(0,0,0,.45);padding:14px;}
+    #modal header{position:static;border:none;background:transparent;padding:0 0 10px;}
+    #modal .title{font-weight:800;}
+  </style>
+</head>
+<body>
+  <div id="loginView">
+    <div style="max-width:520px;margin:10vh auto;padding:18px" class="panel">
+      <h1 style="margin:0 0 8px;font-size:18px;">智能储能电池均衡控制系统</h1>
+      <div class="hint">V1.0 演示环境：用于截图与材料生成的最小可运行界面。</div>
+      <form id="login-form" class="row">
+        <label class="hint">用户名 <input name="username" value="admin" autocomplete="username" /></label>
+        <label class="hint">密码 <input name="password" type="password" value="admin123" autocomplete="current-password" /></label>
+        <button type="submit">登录</button>
+        <div class="hint">提示：任意账号可登录（用于演示与截图）。</div>
+      </form>
+    </div>
+  </div>
+  <div id="appView" style="display:none;">
+    <header>
+      <div class="brand">电池均衡控制台</div>
+      <div class="badge">V1.0</div>
+    </header>
+    <main>
+      <nav>
+        <a href="#home">首页</a>
+        <a href="#packs">电池包</a>
+        <a href="#cells">单体电芯</a>
+        <a href="#balancing">均衡策略</a>
+        <a href="#alarms">告警中心</a>
+        <a href="#reports">统计报表</a>
+        <a href="#audit">审计留痕</a>
+      </nav>
+      <section class="panel">
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;">
+          <h2 id="pageTitle" style="margin:0;font-size:16px;">首页</h2>
+          <div class="hint">API：<span class="k" id="apiStatus">未检测</span></div>
+        </div>
+        <div id="pageBody" style="margin-top:10px;"></div>
+      </section>
+    </main>
+  </div>
+  <div id="modal" class="modal-shell modal hidden">
+    <div class="dialog" role="dialog" aria-modal="true">
+      <header>
+        <div class="title" id="modalTitle">操作</div>
+        <button class="danger" id="modalClose">关闭</button>
+      </header>
+      <div class="hint" id="modalContent"></div>
+    </div>
+  </div>
+  <script>
+    const modal = document.getElementById('modal');
+    const modalTitle = document.getElementById('modalTitle');
+    const modalContent = document.getElementById('modalContent');
+    function closeModal(){ modal.classList.add('hidden'); }
+    function openModal(title, content){ modalTitle.textContent=title; modalContent.textContent=content; modal.classList.remove('hidden'); }
+    document.getElementById('modalClose').onclick = closeModal;
+    window.__rkModal = { closeModal, openModal };
+    async function apiGet(p){ const r=await fetch(p); if(!r.ok) throw new Error('HTTP '+r.status); return await r.json(); }
+    function setStatus(ok){ document.getElementById('apiStatus').textContent = ok ? 'OK' : 'FAIL'; }
+    async function ping(){ try{ await apiGet('/api/health'); setStatus(true);} catch(e){ setStatus(false);} }
+    function renderHome(){
+      document.getElementById('pageTitle').textContent='首页';
+      document.getElementById('pageBody').innerHTML = `
+        <div class='grid'>
+          <div class='card'><h3>均衡目标</h3><div class='hint'>以“最小温升、最小内阻偏差、最短均衡时间”为约束，提升电芯一致性。</div></div>
+          <div class='card'><h3>在线监测</h3><div class='hint'>电压/温度/SoC/内阻偏差实时采集，并形成追溯报表。</div></div>
+          <div class='card'><h3>闭环留痕</h3><div class='hint'>策略下发、执行窗口、告警处置与复核结论自动记录。</div></div>
+        </div>`;
+    }
+    function renderSimple(title, id){
+      document.getElementById('pageTitle').textContent=title;
+      const body = document.getElementById('pageBody');
+      const descMap = {
+        zones: '按站点/柜/簇划分资产边界，提供分区统计、权限隔离与设备定位。',
+        inspections: '对关键页面与接口执行健康检查，形成可追溯的校验记录。',
+        alerts: '对电压差、温升、采样缺失等风险给出提醒，并引导处置闭环。',
+        irrigation: '记录策略下发、执行窗口与回滚点，支撑版本治理与审计。',
+        reports: '输出均衡效果与告警处置报表，支持导出与验收留痕。'
+      };
+      const desc = descMap[id] || '该模块用于展示业务信息与形成材料截图。';
+      body.innerHTML = `<div id='${id}' class='card'><h3>${title}</h3><div class='hint'>${desc}</div><div class='hint'>模块标识：<span class='k'>#${id}</span></div></div>`;
+    }
+    function renderStations(){
+      document.getElementById('pageTitle').textContent = '工作台（Stations）';
+      const body = document.getElementById('pageBody');
+      body.innerHTML = `
+        <div id="stations" class="card">
+          <h3>Stations 列表</h3>
+          <div class="hint">用于演示“新增/编辑/查看/删除”弹窗操作按钮文案。</div>
+          <div class="toolbar">
+            <button onclick="window.__rkModal.openModal('新增','创建新的均衡任务并填写字段。')">新增</button>
+            <button onclick="window.__rkModal.openModal('编辑','修改任务阈值与执行窗口。')">编辑</button>
+            <button onclick="window.__rkModal.openModal('查看','查看任务详情与引用关系。')">查看</button>
+            <button class="danger" onclick="window.__rkModal.openModal('删除','删除条目前请确认无引用并记录审计。')">删除</button>
+          </div>
+          <div class="hint">提示：请按业务流程依次执行新增、编辑、查看、删除，并复核弹窗信息完整性。</div>
+        </div>`;
+    }
+    function route(){
+      const hash=(location.hash||'#home').replace(/^#/, '');
+      if(hash==='home'||hash==='') return renderHome();
+      if(hash==='zones') return renderSimple('资源分区','zones');
+      if(hash==='stations') return renderStations();
+      if(hash==='inspections') return renderSimple('交互检查','inspections');
+      if(hash==='alerts') return renderSimple('风险提醒','alerts');
+      if(hash==='irrigation') return renderSimple('发布流水','irrigation');
+      if(hash==='reports') return renderSimple('统计报表','reports');
+      return renderSimple('页面', hash);
+    }
+    document.getElementById('login-form').addEventListener('submit', (e)=>{
+      e.preventDefault();
+      localStorage.setItem('__demo_logged_in','1');
+      document.getElementById('loginView').style.display='none';
+      document.getElementById('appView').style.display='block';
+      ping(); route();
+    });
+    window.addEventListener('hashchange', ()=>route());
+    if(localStorage.getItem('__demo_logged_in')==='1'){
+      document.getElementById('loginView').style.display='none';
+      document.getElementById('appView').style.display='block';
+      ping(); route();
+    } else { renderHome(); }
+  </script>
+</body>
+</html>

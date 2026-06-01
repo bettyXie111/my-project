@@ -1,0 +1,23 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260529093715
+Username: BETTY_XIE\31556
+RunAs User: BETTY_XIE\31556
+Configuration Name: 
+Machine: BETTY_XIE (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command [Console]::OutputEncoding=[System.Text.Encoding]::UTF8;
+Set-Location -LiteralPath 'E:\copyRight\workspace'; $stamp=Get-Date -Format 'yyyyMMdd_HHmmss'; $outDir=Join-Path (Get-Location) 'run_reports'; New-Item -ItemType Directory -Force -Path $outDir | Out-Null; $transcript=Join-Path $outDir ("transcript_$stamp.txt"); Start-Transcript -LiteralPath $transcript -Force | Out-Null; try { & .\run_autodate_batch.ps1 *>&1 | Tee-Object -FilePath (Join-Path $outDir ("stdout_$stamp.txt")); $code=$LASTEXITCODE } finally { Stop-Transcript | Out-Null }; "EXIT_CODE=$code`nTRANSCRIPT=$transcript"
+Process ID: 47464
+PSVersion: 5.1.26100.8457
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8457
+BuildVersion: 10.0.26100.8457
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+**********************
+Windows PowerShell transcript end
+End time: 20260529093715
+**********************

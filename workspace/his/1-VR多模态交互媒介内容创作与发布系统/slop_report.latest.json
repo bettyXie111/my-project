@@ -1,0 +1,21 @@
+{
+  "generated_at": "2026-05-30T09:35:29",
+  "tool": "run_ai_slop_detector.py",
+  "grade": "Clean",
+  "total_flags": 1,
+  "domains": {
+    "text": 1,
+    "frontend": 0,
+    "code": 0
+  },
+  "fixed": [],
+  "remaining": [
+    {
+      "domain": "text",
+      "rule": "placeholder_cn",
+      "severity": 2,
+      "file": "VR多模态交互媒介内容创作与发布系统操作手册.md",
+      "sample": "- `transform_json`：位置/旋转/缩放（或占位结构）。用于与运行端坐标系统对接。"
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+[
+  {
+    "stage": "baseline_preflight",
+    "passed": true,
+    "message": "baseline passed",
+    "command": "python -X utf8 \"E:\\copyRight\\workspace\\preflight_baseline.py\" --workspace-dir \"E:\\copyRight\\workspace\" --project-dir \"E:\\copyRight\\workspace\\62-食品安全指标快速检测与预警软件\" --requirement-name \"食品安全指标快速检测与预警软件\" --min-prd-chars 2200 --report-json \"E:\\copyRight\\workspace\\62-食品安全指标快速检测与预警软件\\preflight_baseline_report.json\"",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "0_isolation",
+    "passed": true,
+    "message": "project dir exists",
+    "command": "",
+    "command_exit_code": null,
+    "retries": 0
+  },
+  {
+    "stage": "0_1_preflight",
+    "passed": true,
+    "message": "preflight command passed",
+    "command": "\"C:\\Python314\\python.exe\" -X utf8 \"E:\\copyRight\\workspace\\shared\\scripts\\preflight_check.py\" --project-dir . --requirement-name \"食品安全指标快速检测与预警软件\" --min-prd-chars 2200",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "1_prd",
+    "passed": true,
+    "message": "PRD validated, chars=2418",
+    "command": "python -X utf8 ..\\shared\\scripts\\generate_prd.py --project-dir . --requirement-name 食品安全指标快速检测与预警软件 && python -X utf8 ..\\shared\\scripts\\automation_order_guard.py --prd .\\食品安全指标快速检测与预警软件需求规格说明书.md --min-chars 2200",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "2_web",
+    "passed": true,
+    "message": "web skeleton exists",
+    "command": "python -X utf8 .\\scripts\\generate_web_system.py --project-dir . --force && python -X utf8 ..\\shared\\scripts\\run_tests.py",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "3_slop",
+    "passed": true,
+    "message": "slop detector evidence found",
+    "command": "python -X utf8 ..\\shared\\scripts\\run_ai_slop_detector.py --project-dir .",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "4_copyright",
+    "passed": true,
+    "message": "deliverables complete",
+    "command": "python -X utf8 ..\\shared\\scripts\\build_materials.py --name 食品安全指标快速检测与预警软件 --output-dir . --pdf-engine libreoffice",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "prompt_static_check",
+    "passed": true,
+    "message": "no layout-rule leakage keywords found",
+    "command": "",
+    "command_exit_code": null,
+    "retries": 0
+  },
+  {
+    "stage": "baseline_postflight",
+    "passed": true,
+    "message": "baseline passed",
+    "command": "python -X utf8 \"E:\\copyRight\\workspace\\postflight_baseline.py\" --project-dir \"E:\\copyRight\\workspace\\62-食品安全指标快速检测与预警软件\" --requirement-name \"食品安全指标快速检测与预警软件\" --report-json \"E:\\copyRight\\workspace\\62-食品安全指标快速检测与预警软件\\postflight_baseline_report.json\"",
+    "command_exit_code": 0,
+    "retries": 0
+  }
+]

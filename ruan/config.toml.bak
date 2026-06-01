@@ -1,0 +1,28 @@
+model_provider = "OpenAI"
+model = "gpt-5.2"
+review_model = "gpt-5.4"
+model_reasoning_effort = "low"
+disable_response_storage = true
+network_access = "enabled"
+windows_wsl_setup_acknowledged = true
+model_context_window = 1000000
+model_auto_compact_token_limit = 900000
+
+[model_providers.OpenAI]
+name = "OpenAI"
+base_url = "https://api.wenrugouai.cn"
+wire_api = "responses"
+requires_openai_auth = true
+
+[mcp_servers.pencil]
+command = "C:\\Users\\31556\\.pencil\\mcp\\visual_studio_code\\out\\mcp-server-windows-x64.exe"
+args = [ "--app", "visual_studio_code", "--agent", "codexCLI" ]
+
+[windows]
+sandbox = "elevated"
+
+[projects."d:\\users\\31556\\documents\\wechat files\\wxid_xxzwzfcuhuie22\\xwechat_files\\wxid_xxzwzfcuhuie22_111f\\msg\\file\\2026-04\\ruan"]
+trust_level = "trusted"
+
+[projects."e:\\copyright"]
+trust_level = "trusted"

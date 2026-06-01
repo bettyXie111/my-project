@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>黄秋葵重要农艺性状评价系统</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand__mark" aria-hidden="true"></div>
+        <div class="brand__text">
+          <div class="brand__title">黄秋葵重要农艺性状评价系统</div>
+          <div class="brand__subtitle">田间试验记录 · 口径可追溯 · 评分可复核</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <button class="nav__btn is-active" data-view="home">试验卡片</button>
+        <button class="nav__btn" data-view="varieties">材料库</button>
+        <button class="nav__btn" data-view="traits">性状口径</button>
+        <button class="nav__btn" data-view="observations">观测录入</button>
+        <button class="nav__btn" data-view="scoring">综合评价</button>
+        <button class="nav__btn" data-view="audit">操作追溯</button>
+      </nav>
+    </header>
+
+    <main class="main">
+      <div class="modal is-hidden" id="modal">
+        <div class="modal__backdrop" data-close="1"></div>
+        <div class="modal__dialog" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+          <div class="modal__head">
+            <div class="modal__title" id="modal-title">窗口</div>
+            <button class="modal__close" type="button" data-close="1">关闭</button>
+          </div>
+          <div class="modal__body" id="modal-body"></div>
+        </div>
+      </div>
+      <section class="panel is-hidden" id="panel-login">
+        <div class="panel__head">
+          <h2>登录</h2>
+          <div class="panel__hint">演示模式：本页面只用于截图与流程说明，不做真实鉴权。</div>
+        </div>
+        <div class="card">
+          <div class="card__title">账号登录</div>
+          <div class="card__body">
+            <form class="form" id="login-form">
+              <label>用户名<input name="username" placeholder="试验负责人/调查员/数据管理员" required /></label>
+              <label>密码<input name="password" type="password" placeholder="演示环境可任意填写" required /></label>
+              <button type="submit" class="btn primary">进入系统</button>
+            </form>
+            <div class="note" id="login-note"></div>
+          </div>
+        </div>
+      </section>
+      <section class="panel" id="panel-home">
+        <div class="panel__head">
+          <h2>试验卡片</h2>
+          <div class="panel__hint">像研究笔记一样管理试验：先定义口径，再采集数据。</div>
+        </div>
+        <div class="grid">
+          <div class="card">
+            <div class="card__title">创建试验</div>
+            <div class="card__body">
+              <form id="trial-form" class="form">
+                <label>试验名称<input name="name" placeholder="如：2026春季品比" required /></label>
+                <label>地点<input name="location" placeholder="如：南京试验田" required /></label>
+                <label>季节/批次<input name="season" placeholder="如：2026S" required /></label>
+                <label>设计
+                  <select name="design">
+                    <option value="randomized_block">随机区组</option>
+                    <option value="custom_layout">自定义布局</option>
+                  </select>
+                </label>
+                <label>重复数<input name="replicates" type="number" min="1" max="20" value="3" required /></label>
+                <label>负责人<input name="manager" placeholder="可留空" /></label>
+                <button type="submit" class="btn primary">保存</button>
+              </form>
+              <div class="note" id="trial-form-note"></div>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card__title">试验列表</div>
+            <div class="card__body">
+              <div class="toolbar">
+                <input id="trial-q" placeholder="按名称/地点搜索" />
+                <button class="btn" id="trial-refresh">刷新</button>
+              </div>
+              <div id="trial-list" class="list"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="panel is-hidden" id="panel-varieties"></section>
+      <section class="panel is-hidden" id="panel-traits"></section>
+      <section class="panel is-hidden" id="panel-observations"></section>
+      <section class="panel is-hidden" id="panel-scoring"></section>
+      <section class="panel is-hidden" id="panel-audit"></section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__left">V1.0 · 本地演示存储：SQLite</div>
+      <div class="footer__right"><span class="pill">细线网格</span><span class="pill">卡片布局</span><span class="pill">口径入口</span></div>
+    </footer>
+
+    <script type="module" src="./main.js"></script>
+  </body>
+</html>

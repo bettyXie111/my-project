@@ -1,0 +1,74 @@
+[
+  {
+    "stage": "baseline_preflight",
+    "passed": true,
+    "message": "baseline passed",
+    "command": "python -X utf8 \"E:\\copyRight\\workspace\\preflight_baseline.py\" --workspace-dir \"E:\\copyRight\\workspace\" --project-dir \"E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\" --requirement-name \"智能储能电池均衡控制系统\" --min-prd-chars 2200 --report-json \"E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\preflight_baseline_report.json\"",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "0_isolation",
+    "passed": true,
+    "message": "project dir exists",
+    "command": "",
+    "command_exit_code": null,
+    "retries": 0
+  },
+  {
+    "stage": "0_1_preflight",
+    "passed": true,
+    "message": "preflight command passed",
+    "command": "\"E:\\Users\\31556\\AppData\\Local\\Programs\\Python\\Python311\\python.exe\" -X utf8 \"E:\\copyRight\\workspace\\scripts\\preflight_check.py\" --project-dir . --requirement-name \"智能储能电池均衡控制系统\" --min-prd-chars 2200",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "1_prd",
+    "passed": true,
+    "message": "PRD validated, chars=2412",
+    "command": "python -X utf8 ..\\\\scripts\\\\generate_prd.py --project-dir . --requirement-name 智能储能电池均衡控制系统 && python -X utf8 ..\\\\scripts\\\\automation_order_guard.py --prd .\\\\智能储能电池均衡控制系统需求规格说明书.md --min-chars 2200",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "2_web",
+    "passed": true,
+    "message": "web skeleton exists",
+    "command": "python -X utf8 ..\\\\scripts\\\\generate_web_system.py --project-dir . --requirement-name 智能储能电池均衡控制系统 --force && python -X utf8 ..\\\\scripts\\\\run_tests.py",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "3_slop",
+    "passed": true,
+    "message": "slop detector evidence found",
+    "command": "python -X utf8 ..\\\\scripts\\\\run_ai_slop_detector.py --project-dir .",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "4_copyright",
+    "passed": true,
+    "message": "deliverables complete",
+    "command": "python -X utf8 .\\\\scripts\\\\build_materials.py --name 智能储能电池均衡控制系统 --output-dir . --pdf-engine libreoffice",
+    "command_exit_code": 0,
+    "retries": 0
+  },
+  {
+    "stage": "prompt_static_check",
+    "passed": true,
+    "message": "no layout-rule leakage keywords found",
+    "command": "",
+    "command_exit_code": null,
+    "retries": 0
+  },
+  {
+    "stage": "baseline_postflight",
+    "passed": true,
+    "message": "baseline passed",
+    "command": "python -X utf8 \"E:\\copyRight\\workspace\\postflight_baseline.py\" --project-dir \"E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\" --requirement-name \"智能储能电池均衡控制系统\" --report-json \"E:\\copyRight\\workspace\\53-智能储能电池均衡控制系统\\postflight_baseline_report.json\"",
+    "command_exit_code": 0,
+    "retries": 0
+  }
+]

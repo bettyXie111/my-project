@@ -1,0 +1,30 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "project_dir",
+      "passed": true,
+      "message": "E:\\copyRight\\workspace\\62-食品安全指标快速检测与预警软件"
+    },
+    {
+      "name": "prd_optional",
+      "passed": true,
+      "message": "chars=2418"
+    },
+    {
+      "name": "utf8:pipeline_guard.py",
+      "passed": true,
+      "message": "ok"
+    },
+    {
+      "name": "code_files_optional",
+      "passed": true,
+      "message": "count=23 (allowed before stage-2)"
+    },
+    {
+      "name": "code_files_present",
+      "passed": true,
+      "message": "count=23"
+    }
+  ]
+}

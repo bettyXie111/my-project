@@ -1,0 +1,81 @@
+﻿**********************
+Windows PowerShell transcript start
+Start time: 20260529093731
+Username: BETTY_XIE\31556
+RunAs User: BETTY_XIE\31556
+Configuration Name: 
+Machine: BETTY_XIE (Microsoft Windows NT 10.0.26200.0)
+Host Application: C:\Windows\System32\WindowsPowerShell\v1.0\powershell.exe -Command [Console]::OutputEncoding=[System.Text.Encoding]::UTF8;
+Set-Location -LiteralPath 'E:\copyRight\workspace'; $stamp=Get-Date -Format 'yyyyMMdd_HHmmss'; $outDir=Join-Path (Get-Location) 'run_reports'; New-Item -ItemType Directory -Force -Path $outDir | Out-Null; $transcript=Join-Path $outDir ("transcript_$stamp.txt"); Start-Transcript -LiteralPath $transcript -Force | Out-Null; try { & $env:SystemRoot\System32\WindowsPowerShell\v1.0\powershell.exe -NoProfile -ExecutionPolicy Bypass -File .\run_autodate_batch.ps1 *>&1 | Tee-Object -FilePath (Join-Path $outDir ("stdout_$stamp.txt")); $code=$LASTEXITCODE } finally { Stop-Transcript | Out-Null }; "EXIT_CODE=$code`nTRANSCRIPT=$transcript"
+Process ID: 52656
+PSVersion: 5.1.26100.8457
+PSEdition: Desktop
+PSCompatibleVersions: 1.0, 2.0, 3.0, 4.0, 5.0, 5.1.26100.8457
+BuildVersion: 10.0.26100.8457
+CLRVersion: 4.0.30319.42000
+WSManStackVersion: 3.0
+PSRemotingProtocolVersion: 2.3
+SerializationVersion: 1.1.0.1
+**********************
+PASS: PRD generated: E:\copyRight\workspace\20260529\26-机电节能与碳排放集中管控系统\机电节能与碳排放集中管控系统需求规格说明书.md
+[baseline_preflight] PASS - baseline passed
+[0_isolation] INFO - no command, run gate only
+[0_isolation] PASS - project dir exists
+[0_1_preflight] START - attempt 1/2
+[0_1_preflight] CMD - "E:\Users\31556\AppData\Local\Programs\Python\Python311\python.exe" -X utf8 "E:\copyRight\workspace\scripts\preflight_check.py" --project-dir . --requirement-name "机电节能与碳排放集中管控系统" --min-prd-chars 2200
+[0_1_preflight] OUT - PASS: preflight ok. code_exists=False. PRD ok, chars=2416
+[0_1_preflight] GATE - PASS (preflight command passed)
+[0_1_preflight] PASS - preflight command passed
+[1_prd] START - attempt 1/2
+[1_prd] CMD - "E:\Users\31556\AppData\Local\Programs\Python\Python311\python.exe" -X utf8 "E:\copyRight\workspace\scripts\automation_order_guard.py" --prd ".\机电节能与碳排放集中管控系统需求规格说明书.md" --min-chars 2200
+[1_prd] OUT - PASS: PRD validated, visible chars=2416
+[1_prd] GATE - PASS (PRD validated, chars=2416)
+[1_prd] PASS - PRD validated, chars=2416
+[2_web] START - attempt 1/2
+[2_web] CMD - "E:\Users\31556\AppData\Local\Programs\Python\Python311\python.exe" -X utf8 "E:\copyRight\workspace\scripts\generate_web_system.py" --project-dir . --requirement-name "机电节能与碳排放集中管控系统"
+[2_web] OUT - PASS: generated/min-ensured web system skeleton
+[2_web] GATE - PASS (web skeleton exists)
+[2_web] PASS - web skeleton exists
+[3_slop] START - attempt 1/2
+[3_slop] CMD - "E:\Users\31556\AppData\Local\Programs\Python\Python311\python.exe" -X utf8 "E:\copyRight\workspace\scripts\ai_slop_check.py" --project-dir .
+[3_slop] OUT - Wrote E:\copyRight\workspace\20260529\26-机电节能与碳排放集中管控系统\checklog.md
+[3_slop] GATE - PASS (slop audit evidence found)
+[3_slop] PASS - slop audit evidence found
+[4_copyright] START - attempt 1/2
+[4_copyright] CMD - "E:\Users\31556\AppData\Local\Programs\Python\Python311\python.exe" -X utf8 "E:\copyRight\workspace\scripts\build_materials.py" --name "机电节能与碳排放集中管控系统" --output-dir . --pdf-engine libreoffice
+[4_copyright] OUT - [stage4] START - build_materials
+[stage4] PARAM - name=机电节能与碳排放集中管控系统 output_dir=E:\copyRight\workspace\20260529\26-机电节能与碳排放集中管控系统
+[stage4] CHECK - markdown inputs exist
+[stage4] CHECK - markdown files writable
+[stage4] STEP - regenerate...
+[4_copyright] START - attempt 2/2
+[4_copyright] CMD - "E:\Users\31556\AppData\Local\Programs\Python\Python311\python.exe" -X utf8 "E:\copyRight\workspace\scripts\build_materials.py" --name "机电节能与碳排放集中管控系统" --output-dir . --pdf-engine libreoffice
+[4_copyright] OUT - [stage4] START - build_materials
+[stage4] PARAM - name=机电节能与碳排放集中管控系统 output_dir=E:\copyRight\workspace\20260529\26-机电节能与碳排放集中管控系统
+[stage4] CHECK - markdown inputs exist
+[stage4] CHECK - markdown files writable
+[stage4] STEP - regenerate...
+[4_copyright] FAIL - command failed: [stage4] START - build_materials
+[stage4] PARAM - name=机电节能与碳排放集中管控系统 output_dir=E:\copyRight\workspace\20260529\26-机电节能与碳排放集中管控系统
+[stage4] CHECK - markdown inputs exist
+[stage4] CHECK - markdown files writable
+[stage4] STEP - regenerate source markdown
+[stage4] STEP - locate tools (node/pandoc)
+[stage4] STEP - header_text=机电节能与碳排放集中管控系统V1.0
+[stage4] STEP - screenshot_plan items=12
+[stage4] STEP -
+[prompt_static_check] PASS - automation_prompt.md not found, skip
+{
+  "today": "2026-05-29",
+  "xlsx": "E:\\copyRight\\workspace\\list.xlsx",
+  "project_root": "E:\\copyRight\\workspace",
+  "total_rows": 5,
+  "eligible_tasks": 1,
+  "success": 0,
+  "fail": 1,
+  "skipped_duplicate": 0
+}
+**********************
+Windows PowerShell transcript end
+End time: 20260529093814
+**********************

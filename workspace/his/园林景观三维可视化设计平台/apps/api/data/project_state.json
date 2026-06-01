@@ -1,0 +1,161 @@
+{
+  "seeded": true,
+  "sites": [
+    {
+      "id": "S-19e6ea1e014-782e03",
+      "name": "滨水公园示范段",
+      "location": "华东 · 城市新区",
+      "scaleMeterPerPx": 0.05,
+      "northAngleDeg": 0.0,
+      "createdAt": "2026-05-28 20:49:22"
+    }
+  ],
+  "plans": [
+    {
+      "id": "PLN-19e6ea1e014-6b289d",
+      "siteId": "S-19e6ea1e014-782e03",
+      "name": "自然雅致方案",
+      "theme": "自然雅致",
+      "createdBy": "designer",
+      "createdAt": "2026-05-28 20:49:22"
+    }
+  ],
+  "versions": [
+    {
+      "id": "V-19e6ea1e014-973906",
+      "planId": "PLN-19e6ea1e014-6b289d",
+      "version": "V1.0.0",
+      "changeLog": "初版：建立场地基准，整理植物与材料口径，形成评审事项清单。",
+      "createdAt": "2026-05-28 20:49:22",
+      "snapshot": {
+        "season": "春"
+      }
+    }
+  ],
+  "plants": [
+    {
+      "id": "P-19e6ea1e014-c0180c",
+      "code": "P-001",
+      "cnName": "香樟",
+      "category": "乔木",
+      "evergreen": true,
+      "crownMinM": 6,
+      "crownMaxM": 10,
+      "seasonHint": "四季常绿，适合作为骨架乔木。"
+    },
+    {
+      "id": "P-19e6ea1e014-e350e2",
+      "code": "P-002",
+      "cnName": "紫薇",
+      "category": "乔木",
+      "evergreen": false,
+      "crownMinM": 3,
+      "crownMaxM": 5,
+      "seasonHint": "夏季花期明显，适合节点色彩强调。"
+    },
+    {
+      "id": "P-19e6ea1e014-0fc535",
+      "code": "P-003",
+      "cnName": "红枫",
+      "category": "乔木",
+      "evergreen": false,
+      "crownMinM": 4,
+      "crownMaxM": 7,
+      "seasonHint": "秋季红叶，宜与常绿灌木形成对比。"
+    },
+    {
+      "id": "P-19e6ea1e014-7e5f98",
+      "code": "P-004",
+      "cnName": "海桐",
+      "category": "灌木",
+      "evergreen": true,
+      "crownMinM": 0.8,
+      "crownMaxM": 1.2,
+      "seasonHint": "常绿耐修剪，可用于分隔与基础绿篱。"
+    }
+  ],
+  "materials": [
+    {
+      "id": "M-19e6ea1e014-3f2c1f",
+      "code": "M-01",
+      "name": "透水砖（暖灰）",
+      "unit": "㎡",
+      "usage": "主园路"
+    },
+    {
+      "id": "M-19e6ea1e014-3fc23b",
+      "code": "M-02",
+      "name": "花岗岩火烧面",
+      "unit": "㎡",
+      "usage": "入口广场"
+    },
+    {
+      "id": "M-19e6ea1e014-594aa8",
+      "code": "M-03",
+      "name": "防腐木平台板",
+      "unit": "㎡",
+      "usage": "亲水平台"
+    }
+  ],
+  "lights": [
+    {
+      "id": "L-19e6ea1e014-140b2f",
+      "code": "L-01",
+      "cct": "3000K",
+      "watt": 12,
+      "qty": 18
+    },
+    {
+      "id": "L-19e6ea1e014-819d37",
+      "code": "L-02",
+      "cct": "3500K",
+      "watt": 18,
+      "qty": 6
+    }
+  ],
+  "issues": [
+    {
+      "id": "R-1001",
+      "versionId": "V-19e6ea1e014-973906",
+      "title": "入口动线转角偏急",
+      "tag": "动线",
+      "priority": "高",
+      "status": "新建",
+      "createdAt": "2026-05-28 20:49:22"
+    },
+    {
+      "id": "R-1002",
+      "versionId": "V-19e6ea1e014-973906",
+      "title": "水体边缘需增加防滑提示",
+      "tag": "水体",
+      "priority": "中",
+      "status": "处理中",
+      "createdAt": "2026-05-28 20:49:22"
+    }
+  ],
+  "pavings": [
+    {
+      "id": "PV-19e6ea1e014-369dda",
+      "planId": "PLN-19e6ea1e014-6b289d",
+      "materialCode": "M-01",
+      "points": [
+        {
+          "x": 10,
+          "y": 10
+        },
+        {
+          "x": 210,
+          "y": 15
+        },
+        {
+          "x": 230,
+          "y": 120
+        },
+        {
+          "x": 15,
+          "y": 140
+        }
+      ]
+    }
+  ]
+}

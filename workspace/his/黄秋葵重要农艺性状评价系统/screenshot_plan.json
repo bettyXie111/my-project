@@ -1,0 +1,18 @@
+[
+  {"figure": "图1-1", "filename": "fig-1-1-login-full.png", "hash": "login"},
+  {"figure": "图2-1", "filename": "fig-2-1-home-full.png", "hash": "home"},
+  {"figure": "图3-1", "filename": "fig-3-1-varieties.png", "hash": "varieties"},
+  {"figure": "图3-1a", "filename": "fig-3-1a-varieties-create-modal.png", "hash": "varieties", "action": "create", "modal": "true"},
+  {"figure": "图3-1b", "filename": "fig-3-1b-varieties-edit-modal.png", "hash": "varieties", "action": "edit", "modal": "true"},
+  {"figure": "图3-1c", "filename": "fig-3-1c-varieties-view-modal.png", "hash": "varieties", "action": "view", "modal": "true"},
+  {"figure": "图3-1d", "filename": "fig-3-1d-varieties-delete-modal.png", "hash": "varieties", "action": "delete", "modal": "true"},
+  {"figure": "图3-2", "filename": "fig-3-2-traits.png", "hash": "traits"},
+  {"figure": "图3-3", "filename": "fig-3-3-observations.png", "hash": "observations"},
+  {"figure": "图3-4", "filename": "fig-3-4-scoring.png", "hash": "scoring"},
+  {"figure": "图3-5", "filename": "fig-3-5-audit.png", "hash": "audit"},
+  {"figure": "图4-1", "filename": "fig-4-1-home-mobile.png", "hash": "home", "viewport": "mobile"},
+  {"figure": "图4-2", "filename": "fig-4-2-traits-search.png", "hash": "traits"},
+  {"figure": "图4-3", "filename": "fig-4-3-varieties-list.png", "hash": "varieties"},
+  {"figure": "图4-4", "filename": "fig-4-4-observations-list.png", "hash": "observations"},
+  {"figure": "图4-5", "filename": "fig-4-5-scores-list.png", "hash": "scoring"}
+]

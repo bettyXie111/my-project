@@ -1,0 +1,165 @@
+.app-shell {
+  min-height: 100svh;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+.sidebar {
+  padding: 24px 18px;
+  background: linear-gradient(180deg, #111827 0%, #0f172a 100%);
+  border-right: 1px solid rgba(148, 163, 184, 0.15);
+}
+
+.brand {
+  margin-bottom: 24px;
+}
+
+.brand__title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1.5;
+}
+
+.brand__subtitle {
+  margin-top: 6px;
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.nav {
+  display: grid;
+  gap: 10px;
+}
+
+.nav__item {
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 12px;
+  background: rgba(30, 41, 59, 0.65);
+  border: 1px solid transparent;
+}
+
+.nav__item:hover,
+.nav__item--active {
+  border-color: rgba(96, 165, 250, 0.4);
+  background: rgba(37, 99, 235, 0.2);
+  color: #fff;
+}
+
+.status-card {
+  margin-top: 24px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(30, 41, 59, 0.85);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.status-card__label,
+.status-card__hint {
+  font-size: 12px;
+  color: #94a3b8;
+}
+
+.status-card__value {
+  margin: 8px 0;
+  font-size: 32px;
+  font-weight: 700;
+  color: #38bdf8;
+}
+
+.content {
+  padding: 24px;
+}
+
+.content__header {
+  margin-bottom: 20px;
+}
+
+.content__header h1,
+.panel h2,
+.card h3 {
+  margin: 0;
+}
+
+.content__header p,
+.panel p,
+.card p {
+  margin: 8px 0 0;
+  color: #94a3b8;
+}
+
+.content__body {
+  display: grid;
+  gap: 16px;
+}
+
+.panel,
+.card {
+  border-radius: 18px;
+  background: rgba(15, 23, 42, 0.75);
+  border: 1px solid rgba(148, 163, 184, 0.15);
+  padding: 20px;
+}
+
+.grid {
+  margin-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px;
+}
+
+.table {
+  margin-top: 16px;
+  display: grid;
+  gap: 10px;
+}
+
+.table__row {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  gap: 12px;
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 14px;
+  text-align: left;
+  color: inherit;
+  background: rgba(30, 41, 59, 0.72);
+  border: 1px solid rgba(148, 163, 184, 0.12);
+}
+
+.table__row--active {
+  border-color: rgba(56, 189, 248, 0.5);
+  box-shadow: 0 0 0 1px rgba(56, 189, 248, 0.2) inset;
+}
+
+.primary-button {
+  margin-top: 12px;
+  border: none;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #38bdf8, #2563eb);
+  color: #fff;
+  padding: 10px 16px;
+  cursor: pointer;
+}
+
+.primary-button:hover {
+  opacity: 0.95;
+}
+
+@media (max-width: 960px) {
+  .app-shell {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid rgba(148, 163, 184, 0.15);
+  }
+
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

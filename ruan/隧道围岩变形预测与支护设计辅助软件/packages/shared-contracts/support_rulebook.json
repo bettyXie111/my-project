@@ -1,0 +1,89 @@
+{
+  "name": "围岩支护规则簿",
+  "description": "按综合风险分映射到支护级别与措施。",
+  "levels": [
+    {
+      "level": "A",
+      "label": "稳定区",
+      "scoreRange": [
+        0,
+        34
+      ],
+      "shotcreteThickness": 18,
+      "boltLength": 3.0,
+      "boltSpacing": "1.2m x 1.2m",
+      "steelArchSpacing": "1.0m",
+      "advanceSupport": "常规超前小导管",
+      "closureHours": 24,
+      "monitoringCycle": "每日 1 次"
+    },
+    {
+      "level": "B",
+      "label": "敏感区",
+      "scoreRange": [
+        35,
+        49
+      ],
+      "shotcreteThickness": 22,
+      "boltLength": 3.5,
+      "boltSpacing": "1.0m x 1.0m",
+      "steelArchSpacing": "0.8m",
+      "advanceSupport": "超前小导管 + 锚索局部加密",
+      "closureHours": 18,
+      "monitoringCycle": "12 小时 1 次"
+    },
+    {
+      "level": "C",
+      "label": "预警区",
+      "scoreRange": [
+        50,
+        64
+      ],
+      "shotcreteThickness": 26,
+      "boltLength": 4.0,
+      "boltSpacing": "0.9m x 0.9m",
+      "steelArchSpacing": "0.6m",
+      "advanceSupport": "超前管棚 + 系统锚杆",
+      "closureHours": 14,
+      "monitoringCycle": "8 小时 1 次"
+    },
+    {
+      "level": "D",
+      "label": "高风险区",
+      "scoreRange": [
+        65,
+        79
+      ],
+      "shotcreteThickness": 30,
+      "boltLength": 4.5,
+      "boltSpacing": "0.8m x 0.8m",
+      "steelArchSpacing": "0.5m",
+      "advanceSupport": "长管棚 + 锚索 + 临时仰拱",
+      "closureHours": 10,
+      "monitoringCycle": "4 小时 1 次"
+    },
+    {
+      "level": "E",
+      "label": "应急区",
+      "scoreRange": [
+        80,
+        100
+      ],
+      "shotcreteThickness": 34,
+      "boltLength": 5.0,
+      "boltSpacing": "0.7m x 0.7m",
+      "steelArchSpacing": "0.4m",
+      "advanceSupport": "全断面预加固 + 双层钢拱架",
+      "closureHours": 8,
+      "monitoringCycle": "2 小时 1 次"
+    }
+  ],
+  "decisionFactors": [
+    "围岩级别",
+    "地下水等级",
+    "偏压类型",
+    "拱顶沉降与周边收敛",
+    "支护闭合时差",
+    "施工扰动与降雨因子"
+  ]
+}

@@ -1,0 +1,24 @@
+# Python
+__pycache__/
+*.pyc
+venv/
+.env
+*.db
+*.sqlite3
+
+# Node.js
+node_modules/
+dist/
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+Thumbs.db
+.DS_Store
+
+**/.tools/
+ruan/.tools/
+workspace/.tools/

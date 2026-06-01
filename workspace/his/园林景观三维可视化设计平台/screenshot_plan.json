@@ -1,0 +1,18 @@
+[
+  { "figure": "图1-1", "filename": "fig-1-1-login-full.png", "page": "login" },
+  { "figure": "图2-1", "filename": "fig-2-1-home-full.png", "page": "home" },
+
+  { "figure": "图3-1", "filename": "fig-3-1-site.png", "hash": "site" },
+  { "figure": "图3-2", "filename": "fig-3-2-plan.png", "hash": "plan" },
+
+  { "figure": "图3-3", "filename": "fig-3-3-planting.png", "hash": "planting" },
+  { "figure": "图3-3a", "filename": "fig-3-3a-planting-create-modal.png", "hash": "planting", "action": "create", "modal": "true" },
+  { "figure": "图3-3b", "filename": "fig-3-3b-planting-edit-modal.png", "hash": "planting", "action": "edit", "modal": "true" },
+  { "figure": "图3-3c", "filename": "fig-3-3c-planting-view-modal.png", "hash": "planting", "action": "view", "modal": "true" },
+  { "figure": "图3-3d", "filename": "fig-3-3d-planting-delete-modal.png", "hash": "planting", "action": "delete", "modal": "true" },
+
+  { "figure": "图3-4", "filename": "fig-3-4-materials.png", "hash": "materials" },
+  { "figure": "图3-5", "filename": "fig-3-5-review.png", "hash": "review" },
+  { "figure": "图3-6", "filename": "fig-3-6-export.png", "hash": "export" }
+]
+
